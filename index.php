@@ -106,7 +106,7 @@
             </div>
 
             <div id="button_recentlist" class="bouton preview" style="border:solid 3px #cc6566;">
-                <p style="color:#cc6566;">Recemment</p>
+                <p style="color:#cc6566;">Actions Passees</p>
             </div>
 
             <div id="button_info_sup" class="bouton preview" style="border:solid 3px #f9df68; margin-right:0;">
@@ -168,14 +168,14 @@
     </div>
     <?php wp_reset_query(); ?>
 
-	<!--Liste des 3 dernières actions-->
+	<!--Liste des actions-->
     <div id="recentlist" class="liste_carte">
         <div class="flex">
             <div class="title_button" style="color:#d84c29; background-image:url(<?php bloginfo('stylesheet_directory'); ?>/img/fond_texte.png); width:250px;">
-                <p>Récemment</p>
+                <p>Actions Passées</p>
             </div>
 		<?php
-        $my_query = new WP_Query( array('post_type' => 'action', 'posts_per_page' => 3, 'numberposts' => 3,'orderby' => 'date'));
+        $my_query = new WP_Query( array('post_type' => 'action', 'posts_per_page' => '-1', 'numberposts' => '100','orderby' => 'date'));
         if ($my_query->have_posts()):while($my_query->have_posts()):$my_query->the_post();?>
         	<a href="<?php the_permalink();?>" class="link_action">
                 <div class="preview action">
