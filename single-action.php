@@ -76,6 +76,7 @@
 <!--Vers l'épisode et/ou l'artiste-->
 
     <div id="parents_container">
+			<p class="quoi_list">Fait par:</p>
         <?php
         $object_terms_art = wp_get_object_terms($post->ID, 'artiste', array('parent' => 0));
         if ($object_terms_art) {
@@ -84,7 +85,7 @@
                 ?>
                     <div>
                     <a href="<?php echo get_term_link($term_art->slug, 'artiste'); ?>">
-                    <p class="quoi_list">Fait par:</p>
+                    <!-- <p class="quoi_list">Fait par:</p> -->
                     <div style="clear:both"></div>
                     <p class="parents_list"><?php echo $term_art->name;?></p>
                     </a>

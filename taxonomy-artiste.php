@@ -155,7 +155,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
                         <div class="episode_child">
                             <a href="<?php the_permalink();?>"><p style="margin-right:14px;" class="action_list"><?php the_title();?></p></a>
                             <div style="clear:both"></div>
-                            <div class="img_action_lieu">
+                            <!-- <div class="img_action_lieu">
                                 <?php $lieux = get_the_terms( $query->ID, 'lieu');
                                 foreach ($lieux as $l){
                                 ?>
@@ -165,7 +165,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
                                 <?php
                                 }
                                 ?>
-                            </div>
+                            </div> -->
                         </div>
                         <div style="clear:both"></div>
                     <?php
@@ -218,7 +218,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
                     <p style="margin-right:14px;" class="action_list"><?php the_title() ?></p>
                 </a>
                 <div style="clear:both"></div>
-                <?php $lieux = get_the_terms( $query->ID, 'lieu');
+                <!-- <?php $lieux = get_the_terms( $query->ID, 'lieu');
                 foreach ($lieux as $l){
                 ?>
                 <a href="<?php echo get_term_link($l->slug,'lieu');?>">
@@ -227,7 +227,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
                 <?php
                 }
                 ?>
-                <div style="clear:both"></div>
+                <div style="clear:both"></div> -->
             <?php endwhile; ?>
             <?php endif; ?>
         </div>
@@ -272,7 +272,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
 	if($ep->parent > 0) {
 	echo "<p>Le projet</p>";
 	} else {
-	echo "<p>L'artiste</p>";
+	echo "<p>Le complice</p>";
 	}?>
     </div>
 

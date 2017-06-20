@@ -91,12 +91,12 @@
                 <p style="color:#844184;">L'histoire</p>
             </div>
 
-            <div id="button_lieulist" class="bouton preview" style="border:solid 3px #388ea5;">
+            <!-- <div id="button_lieulist" class="bouton preview" style="border:solid 3px #388ea5;">
                 <p style="color:#388ea5;">Les paysages</p>
-            </div>
+            </div> -->
 
             <div id="button_artistelist" class="bouton preview" style="border:solid 3px #d84c29; margin-right:0;">
-                <p style="color:#d84c29;">Les artistes</p>
+                <p style="color:#d84c29;">Les complices</p>
             </div>
         </div>
 
@@ -203,7 +203,7 @@
     <?php wp_reset_query(); ?>
 
 	<!--Liste des lieux-->
-    <div id="lieulist" class="liste_carte">
+    <!-- <div id="lieulist" class="liste_carte">
         <div class="flex">
             <div class="title_button" style="color:#388ea5; background-image:url(<?php bloginfo('stylesheet_directory'); ?>/img/fond_paysage.png); width:250px;">
                 <p>Les paysages</p>
@@ -218,13 +218,13 @@
                     </a>
                 <?php endforeach; ?>
         </div>
-    </div>
+    </div> -->
 
-	<!--Liste des artistes-->
+	<!--Liste des complices-->
 	<div id="artistelist" class="liste_carte">
         <div class="flex">
             <div class="title_button" style="color:#d84c29; background-image:url(<?php bloginfo('stylesheet_directory'); ?>/img/fond_texte.png);">
-                <p>Les artistes</p>
+                <p>Les complices</p>
             </div>
             <?php $terms=get_terms('artiste', array( 'parent' => 0 ));?>
             <?php foreach($terms as $t): ?>
@@ -338,7 +338,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:block;"/>
                         <p class="titre_lieu_picto">
@@ -354,7 +354,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
 					<script>
 					var idlieu = $("#idlieu1").val();
@@ -475,7 +475,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -491,7 +491,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu2").val();</script>
                     <?php
@@ -611,7 +611,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -627,7 +627,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu4").val();</script>
                     <?php
@@ -747,7 +747,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -763,7 +763,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu5").val();</script>
                     <?php
@@ -883,7 +883,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -899,7 +899,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu7").val();</script>
                     <?php
@@ -1019,7 +1019,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -1035,7 +1035,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu6").val();</script>
                     <?php
@@ -1157,7 +1157,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -1173,7 +1173,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu3").val();</script>
                     <?php
@@ -1295,7 +1295,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -1311,7 +1311,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu9").val();</script>
                     <?php
@@ -1433,7 +1433,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -1449,7 +1449,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu8").val();</script>
                     <?php
@@ -1572,7 +1572,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -1588,7 +1588,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu10").val();</script>
                     <?php
@@ -1710,7 +1710,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -1726,7 +1726,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu11").val();</script>
                     <?php
@@ -1848,7 +1848,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -1864,7 +1864,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu13").val();</script>
                     <?php
@@ -1986,7 +1986,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -2002,7 +2002,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu12").val();</script>
                     <?php
@@ -2124,7 +2124,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -2140,7 +2140,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu14").val();</script>
                     <?php
@@ -2262,7 +2262,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -2278,7 +2278,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu15").val();</script>
                     <?php
@@ -2400,7 +2400,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -2416,7 +2416,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu17").val();</script>
                     <?php
@@ -2538,7 +2538,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -2554,7 +2554,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu18").val();</script>
                     <?php
@@ -2676,7 +2676,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -2692,7 +2692,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu19").val();</script>
                     <?php
@@ -2814,7 +2814,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -2830,7 +2830,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu21").val();</script>
                     <?php
@@ -2952,7 +2952,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -2968,7 +2968,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu20").val();</script>
                     <?php
@@ -3090,7 +3090,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -3106,7 +3106,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu16").val();</script>
                     <?php
@@ -3229,7 +3229,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -3245,7 +3245,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu22").val();</script>
                     <?php
@@ -3367,7 +3367,7 @@
                     </a>
                     <?php endwhile;?>
 
-                    <div class="preview picto">
+                    <!-- <div class="preview picto">
                         <a href="<?php echo get_term_link($term->slug,'lieu');?>">
                         <img class="picto_lieu" src="<?php if (function_exists('z_taxonomy_image_url')) echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name;?>" style="display:inline-block;"/>
                         <p class="titre_lieu_picto">
@@ -3383,7 +3383,7 @@
                             <p class="voir_plus">Voir plus</p>
                         </a>
                         <?php }; ?>
-                    </div>
+                    </div> -->
 
                     <script>var idlieu = $("#idlieu23").val();</script>
                     <?php
