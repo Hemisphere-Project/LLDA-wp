@@ -37,7 +37,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
 				return this; // Suggested by ColeLawrence
 			}
 		});
-		
+
 		$.fn.extend({
 			replaceTag: function (newTagObj, keepProps) {
 				// "return" suggested by ColeLawrence
@@ -65,7 +65,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
         Retour
         </p>
         </a>
-    </div>    
+    </div>
 
 <!--Lien vers la page de l'artiste-->
 	<?php
@@ -79,35 +79,35 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
         foreach ($object_terms as $term) {
         ?>
         	<a href="<?php echo get_term_link($term->slug, 'artiste'); ?>">
-            <div> 
-            <p style="background-color:#fdee71; padding:3% 3% 0 3%; color:#d84c29; font-size:1em; font-family:OCR_A, Helvetica; display:inline-block;">QUI ?</p> 
+            <div>
+            <p style="background-color:#f9df68; padding:3% 3% 0 3%; color:#d84c29; font-size:1em; font-family:OCR_A, Helvetica; display:inline-block;">QUI ?</p>
 			</br></br>
 			<p><?php echo $term->name; ?></p>
             </div>
             </a>
             <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_random.svg" alt="*" height="90%" style="display:inline; margin:0 4% 0 1.8%">
-        <?php 
+        <?php
         }
 		?>
     </div>
     <?php
     }
     ?>
-        
+
 <!--Liste de 3 posts au hasard-->
 	<?php
-    if($ep->parent == 0) 
+    if($ep->parent == 0)
     {
 	?>
 	<div class="bande_random" style="visibility:hidden;">
-        <?php  
+        <?php
         remove_all_filters('posts_orderby');
         $posts = get_posts('post_type=action&orderby=rand&numberposts=3'); foreach($posts as $post) { ?>
         <div style="display:inline;">
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
             <p><?php the_title(); ?></p>
             </a>
-            <?php 
+            <?php
             $arg = array( 'parent' => 0);
             $terms = wp_get_object_terms( $post->ID, 'artiste', $arg );
             foreach($terms as $t): ?>
@@ -122,7 +122,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
     <?php
 	}
 	?>
-    
+
 <?php wp_reset_postdata();?>
 
 
@@ -168,7 +168,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
                             </div>
                         </div>
                         <div style="clear:both"></div>
-                    <?php 
+                    <?php
                     endwhile; endif; wp_reset_query(); ?>
                     <?php
                     echo "<br />";
@@ -183,18 +183,18 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
                 <div style="clear:both"></div>
             <?php
             } ?>
-            
+
             </br>
-            
+
     <!--Liste des actions sans épisode-->
-            <?php 
+            <?php
 			if ($ep->parent == 0) {
 			?>
                 <div style="border-right:solid 3px #d84c29;">
             <?php }else {?>
             	<div>
             <?php };
-			
+
             $enfant = get_term_children(get_queried_object_id(),'artiste');
             //print_r($enfant);
             $my_query = new WP_Query( array(
@@ -215,7 +215,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
             ));
             if ($my_query->have_posts()):while($my_query->have_posts()):$my_query->the_post();?>
                 <a href="<?php the_permalink(); ?>">
-                    <p style="margin-right:14px;" class="action_list"><?php the_title() ?></p>     
+                    <p style="margin-right:14px;" class="action_list"><?php the_title() ?></p>
                 </a>
                 <div style="clear:both"></div>
                 <?php $lieux = get_the_terms( $query->ID, 'lieu');
@@ -231,12 +231,12 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
             <?php endwhile; ?>
             <?php endif; ?>
         </div>
-    
+
     </div>
-    
-    
+
+
 <!--Liste des actions-->
-	<?php     
+	<?php
 	/*if($ep->parent > 0) {
 		global $query_string;
 		$posts = query_posts( $query_string . '&post_type=action' );
@@ -247,7 +247,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
 				</ul>
 		<?php endwhile; else:?>
 			<p>Aucune intervention pour l'instant</p>
-		<?php endif; 
+		<?php endif;
 	}
 	else {
 	global $query_string;
@@ -261,37 +261,37 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
 		<p>Aucune intervention pour l'instant</p>
 	<?php endif;
 	}*/?>
-    
+
 	<?php wp_reset_query(); ?>
 
-    
+
 
 <!--Contenu-->
 	<div id="qui">
-    <?php     
+    <?php
 	if($ep->parent > 0) {
 	echo "<p>Le projet</p>";
 	} else {
 	echo "<p>L'artiste</p>";
 	}?>
     </div>
-    
+
     <div id="content_text">
     <!--Nom de l'artiste/l'épisode-->
         <a href="<?php echo get_term_link($term,'artiste'); ?>"><span id="titre"><?php wp_title(''); ?></span></a>
     	<div style="background-color: rgba(255, 255, 255, 0.8);padding:10px;"><?php echo term_description();
 		?></div>
     </div>
-    
+
     <div id="content_img">
     	<?php echo term_description();
 		?>
     </div>
-    
+
     <script>
 	$('#content_img iframe').parent('p').replaceTag('<span>'), true;
     </script>
-        
+
 </body>
 </html>
 
@@ -328,7 +328,7 @@ font-style: normal;
 
 html {
 	/*font-size: 62.5%;*/
-	width:auto; height:100%;	
+	width:auto; height:100%;
 
 }
 
@@ -339,7 +339,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0px; 
+    width: 0px;
     background: transparent;
 }
 
@@ -355,13 +355,13 @@ a {
 }
 
 p, li {
-	color: #d84c29;	
+	color: #d84c29;
 }
 
 #titre {
-	background-color:#fdee71; color:#d84c29;
+	background-color:#f9df68; color:#d84c29;
 	display:table;
-	box-shadow:12px 0 0 #fdee71, -7px 0 0 #fdee71;
+	box-shadow:12px 0 0 #f9df68, -7px 0 0 #f9df68;
 	padding-top:5px;
 	margin-bottom: 5%;
 	font-family: ORATOR, Helvetica, sans-serif;
@@ -370,12 +370,12 @@ p, li {
 }
 
 .bande_random {
-	height:14%; 
+	height:14%;
 	width:45%;
 	float: right;
 	display:flex;
 	display:-webkit-flex;
-	display:-moz-flex;	
+	display:-moz-flex;
 	justify-content: flex-end;
 	align-items: flex-end;
 	-webkit-justify-content: flex-end;
@@ -389,7 +389,7 @@ p, li {
 }
 .bande_random p {
 	font-size:0.75em;
-	font-family: ORATOR, Helvetica, sans-serif;	
+	font-family: ORATOR, Helvetica, sans-serif;
 }
 
 #action_container {
@@ -420,7 +420,7 @@ p, li {
 	font-size: 0.6em;
 	margin-top: 4%;
 	margin-bottom:1%;
-	background-color: #fdee71;
+	background-color: #f9df68;
 	padding:2%;
 }
 
@@ -430,7 +430,7 @@ p, li {
 	margin-right:9px;
 	font-family: OCR_A, Helvetica, sans-serif;
 	font-size: 1.1em;
-	background-color: #fdee71;
+	background-color: #f9df68;
 	padding:2% 2% 0 2%;
 	margin-bottom:1%;
 	text-align:right;
@@ -440,7 +440,7 @@ p, li {
 	display:none;
 }
 .episode_child:hover .img_action_lieu {
-	display:block;	
+	display:block;
 }
 */
 .category-thumbnail {
@@ -456,19 +456,19 @@ p, li {
                 .category-thumbnail {
 				float:left !important;
 				margin-right:0;
-				margin-left:7%;	
+				margin-left:7%;
 				}
 				#action_container p {
 				float:left;
 				margin-right:0;
 				margin-left:7%;
-				display:inline-block;	
+				display:inline-block;
 				}
             <?php } ?>
 
 
 audio {
-	visibility:visible !important;	
+	visibility:visible !important;
 }
 
 #qui {
@@ -511,16 +511,16 @@ audio {
 	  display:inline;
 	  line-height:1.2em;
 	  box-shadow:10px 0 0 white, -7px 0 0 white;
-	  font-family:newsGothic, Helvetica, sans-serif !important;	
+	  font-family:newsGothic, Helvetica, sans-serif !important;
 	  padding:1px 0;
 	  }
 
 #content_text audio {
 	display:block;
-	margin: 10px 0 10px 0;	
+	margin: 10px 0 10px 0;
 }
 #content_img > a, #content_img > p, #content_img > audio, #content_img > h1, #content_img > h2 {
-	display:none;	
+	display:none;
 }
 
 #content_img {
@@ -538,7 +538,7 @@ audio {
 	width:100% !important;
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%); 
+	filter: grayscale(100%);
 }
 
 #content_img img:hover,
@@ -556,9 +556,7 @@ audio {
 	margin: 2% auto;
 }
 
-#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#fdee71; float:left; display:inline;}
+#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#f9df68; float:left; display:inline;}
 /*#retour:hover #back {display:inline;}*/
 
 </style>
-
-

@@ -21,7 +21,10 @@ Description: Thème réalisé pour le projet Le Long de l'Axe de Komplex Kapharn
     background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background: #fef6b1;
+    background: #f9df68;
+}
+.info_container::-webkit-scrollbar-thumb {
+    background: #fff;
 }
 
 @-webkit-keyframes clignote {
@@ -90,6 +93,8 @@ body {
 	background-repeat:no-repeat;
 	width:6211px;
 	height:auto;
+	/*POUR BAISSER LA CARTE*/
+	/*background-position: left 20px;*/
 
 }
 
@@ -117,7 +122,7 @@ body {
 	-moz-justify-content:space-between;
 	display:none;
 	padding:15px 40px 10px 40px;
-	border: solid 3px #fdee71;
+	border: solid 3px #f9df68;
 	background-color:rgba(255, 255, 255, 0.95);
 }
 
@@ -144,14 +149,14 @@ body {
 }
 
 .clignotant{
-	border:solid 2px #fdee71;
+	border:solid 2px #f9df68;
 	background-color:rgba(255, 255, 255, 0.9);
 }
 
 #menu_info {
 	width:45%;
 	height:100%;
-	background-color:#fdee71;
+	background-color:#f9df68;
 	position:fixed;
 	left:-830px;
 	z-index:2;
@@ -242,7 +247,7 @@ html:lang(en)>body  .info_container {
 	display:inline;
 	box-shadow:10px 0 0 #ffffff, -7px 0 0 #ffffff;
 	padding:3px 0;
-	color:#fdee71;
+	color:#f9df68;
 	font-size: 2em;
 	font-family:OCR_A, Helvetica, sans-serif;
 }
@@ -255,15 +260,15 @@ html:lang(en)>body  .info_container {
 	position:fixed;
 	top:0;
 	left:0;
-	margin:20px 0 0 30px;
+	margin:15px 0 0 15px;
 	z-index:10;
 }
 #button_menu p {
 	font-size: 5em;
 	font-family: OCR_A, Helvetica, sans-serif;
 	margin:5px;
-	color:#fdee71;
-	border-top: solid 3px #fdee71;
+	color:#f9df68;
+	border-top: solid 3px #f9df68;
 	padding-top:10px;
 	background-color:#FFF;
 	box-shadow:10px 0 0 #FFF, -10px 0 0 #FFF;
@@ -316,7 +321,7 @@ html:lang(en)>body  .info_container {
 	background-color:#4b99ad;
 }
 #button_info_sup:hover {
-	background-color:#fdee71;
+	background-color:#f9df68;
 }
 
 #menu_barre {
@@ -356,14 +361,14 @@ html:lang(en)>body  .info_container {
 	margin-bottom:10px;
 }
 .box_artiste p {
-	background-color: #fdee71;
+	background-color: #f9df68;
 	font-size:1.5em;
 	font-family:newsGothic, Helvetica, sans-serif;
 	float:left;
 	display:inline-block;
 	margin: 40 10 0 10;
 	letter-spacing: 2px;
-	box-shadow:7px 0 0 #fdee71, -7px 0 0 #fdee71;
+	box-shadow:7px 0 0 #f9df68, -7px 0 0 #f9df68;
 	width:200px;
 }
 
@@ -373,13 +378,13 @@ html:lang(en)>body  .info_container {
 }
 
 .box_lieu p {
-	background-color: #fdee71;
+	background-color: #f9df68;
 	color:#388ea5;
 	font-size:1.1em;
 	font-family:newsGothic, Helvetica, sans-serif;
 	display:inline;
 	letter-spacing: 2px;
-	box-shadow:7px 0 0 #fdee71, -7px 0 0 #fdee71;
+	box-shadow:7px 0 0 #f9df68, -7px 0 0 #f9df68;
 }
 
 .category-thumbnail {
@@ -401,9 +406,9 @@ html:lang(en)>body  .info_container {
 }
 
 .title_button p {
-	box-shadow:7px 0 0 #fdee71, -7px 0 0 #fdee71;
+	box-shadow:7px 0 0 #f9df68, -7px 0 0 #f9df68;
 	padding-top:3px;
-	background-color: #fdee71;
+	background-color: #f9df68;
 }
 
 .contenu_lieu {
@@ -414,7 +419,7 @@ html:lang(en)>body  .info_container {
 	z-index:25;
 	width:63%;
 	background-color: rgba(255, 255, 255, 0.95);
-	border: solid 3px #fdee71;
+	border: solid 3px #f9df68;
 	margin:5% 15% 0 15%;
 	padding:3% 3% 0 3%;
 	overflow-y:auto;
@@ -548,8 +553,8 @@ html:lang(en)>body  .info_container {
 	-moz-align-self:stretch;
 }
 .title_event p {
-	box-shadow:10px 0 0 #fdee71, -7px 0 0 #fdee71 !important;
-	background-color: #fdee71 !important;
+	box-shadow:10px 0 0 #f9df68, -7px 0 0 #f9df68 !important;
+	background-color: #f9df68 !important;
 	font-size:1.5em;
 }
 
@@ -576,9 +581,9 @@ html:lang(en)>body  .info_container {
 	width:100px;
 }
 .titre_lieu_picto {
-	box-shadow: 7px 0 0 #fdee71, -7px 0 0 #fdee71;
+	box-shadow: 7px 0 0 #f9df68, -7px 0 0 #f9df68;
 	padding: 0 3px;
-	background-color: #fdee71;
+	background-color: #f9df68;
 	color:#FFF;
 	font-family:OCR_A, Helvetica, sans-serif;
 	font-size:2em;
@@ -588,8 +593,8 @@ html:lang(en)>body  .info_container {
 .voir_plus{
 	font-family:ORATOR, Helvetica, sans-serif;
 	font-size:1.4em;
-	color: #fdee71;
-	border: solid 2px #fdee71;
+	color: #f9df68;
+	border: solid 2px #f9df68;
 	display:inline;
 	text-align:center;
 	padding:8% 4% 3% 4%;

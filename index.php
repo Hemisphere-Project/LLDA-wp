@@ -109,8 +109,8 @@
                 <p style="color:#cc6566;">Recemment</p>
             </div>
 
-            <div id="button_info_sup" class="bouton preview" style="border:solid 3px #fdee71; margin-right:0;">
-                <p style="color:#fdee71;">Qui sommes-nous?</p>
+            <div id="button_info_sup" class="bouton preview" style="border:solid 3px #f9df68; margin-right:0;">
+                <p style="color:#f9df68;">Qui sommes-nous?</p>
             </div>
         </div>
     </div>

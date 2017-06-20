@@ -23,7 +23,7 @@
 				return this; // Suggested by ColeLawrence
 			}
 		});
-		
+
 		$.fn.extend({
 			replaceTag: function (newTagObj, keepProps) {
 				// "return" suggested by ColeLawrence
@@ -36,9 +36,9 @@
 		$("#content_img img").removeClass("active");
 		$(this).addClass("active");
 		});
-		
+
 	</script>
-    
+
 </head>
 
 <body>
@@ -52,30 +52,30 @@
         </p>
         </a>
     </div>
-    
-<?php wp_reset_query(); ?>  
+
+<?php wp_reset_query(); ?>
 
 
 <!--en_Tête-->
 	<div id="histoire">
 		<p style="border-top: solid 3px #844184; display:inline-block; padding-top:1.1%;">L'histoire</p>
     </div>
-    
+
 <?php wp_reset_query(); ?>
-  
+
 <!--Contenu-->
     <div id="content_img">
     	<?php echo the_content(); ?>
     </div>
-    
+
     <div id="content_text">
         <!--Le titre-->
         <a href="<?php the_permalink(); ?>"><span id="titre"><?php the_title();?></span></a>
     	<div style="background-color: rgba(255, 255, 255, 0.8);padding:10px;"><?php echo the_content(); ?></div>
     </div>
 
-    
-       
+
+
 <!--Liste des recits-->
 	<div id="action_container">
 
@@ -95,26 +95,26 @@
 		</div>
     </div>
 
-<?php wp_reset_query(); ?>    
+<?php wp_reset_query(); ?>
 
 
     <script>
 	$('#content_img iframe').parent('p').replaceTag('<span>'), true;
-	
+
 	$('#action_container').mouseenter (function() {
 		$('#action_container').stop().animate({left:'0'}, 'normal', 'swing');
 	});
 	$('#action_container').mouseleave (function() {
 		$('#action_container').animate({left:'-17.5%'}, 'normal', 'swing');
 	});
-	
+
 	$('#content_text').mouseenter (function() {
 		$('#content_text').stop().animate({bottom:'15px'}, 'normal', 'swing');
 	});
 	$('#content_text').mouseleave (function() {
 		$('#content_text').animate({bottom:'-37%'}, 'normal', 'swing');
 	});
-	
+
     </script>
 
 </body>
@@ -153,7 +153,7 @@ font-style: normal;
 
 html {
 	/*font-size: 62.5%;*/
-	width:auto; height:100%;	
+	width:auto; height:100%;
 
 }
 
@@ -165,7 +165,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0px; 
+    width: 0px;
     background: transparent;
 }
 
@@ -187,7 +187,7 @@ a {
 }
 
 #content_img > a, #content_img > p, #content_img > audio, #content_img > h1, #content_img > h2 {
-	display:none;	
+	display:none;
 }
 
 #content_img {
@@ -204,7 +204,7 @@ a {
 	width:80% !important;
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 	-webkit-filter: grayscale(100%);
-	filter: gray; 
+	filter: gray;
 }
 
 #content_img img:hover,
@@ -223,9 +223,9 @@ a {
 }
 
 #titre {
-	background-color:#fdee71; color:#844184;
+	background-color:#f9df68; color:#844184;
 	display:table;
-	box-shadow:12px 0 0 #fdee71, -7px 0 0 #fdee71;
+	box-shadow:12px 0 0 #f9df68, -7px 0 0 #f9df68;
 	padding-top:5px;
 	margin-bottom: 2.5%;
 	font-family: ORATOR, Helvetica, sans-serif;
@@ -266,16 +266,16 @@ a {
 	  display:inline;
 	  line-height:1.5em;
 	  box-shadow:8px 0 0 white, 0 0 0 white;
-	  font-family:newsGothic, Helvetica, sans-serif !important;	
+	  font-family:newsGothic, Helvetica, sans-serif !important;
 	  padding:1px 0;
 	  }
 
 #content_text audio {
 	display:block;
-	margin: 10px 0 10px 0;	
+	margin: 10px 0 10px 0;
 }
 audio {
-	visibility:visible !important;	
+	visibility:visible !important;
 }
 
 #action_container {
@@ -310,12 +310,12 @@ audio {
 	font-size: 0.6em;
 	margin-top: 4%;
 	margin-bottom:1%;
-	background-color: #fdee71;
+	background-color: #f9df68;
 	padding:2%;
 	float:left;
 }
 
-#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#fdee71; float:right; display:block;}
+#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#f9df68; float:right; display:block;}
 /*#retour:hover #back {display:block;}*/
 #retour img {
   -moz-transform: scaleX(-1);    /* Gecko */

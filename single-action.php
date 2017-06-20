@@ -20,7 +20,7 @@
 			return this; // Suggested by ColeLawrence
 		}
 	});
-	
+
 	$.fn.extend({
 		replaceTag: function (newTagObj, keepProps) {
 			// "return" suggested by ColeLawrence
@@ -46,18 +46,18 @@
         Retour
         </p>
         </a>
-    </div>    
-    
+    </div>
+
 <!--Liste de 3 posts au hasard-->
 	<div class="bande_random" style="visibility:hidden;">
-        <?php  
+        <?php
         remove_all_filters('posts_orderby');
         $posts = get_posts('post_type=action&orderby=rand&numberposts=3'); foreach($posts as $post) { ?>
         <div style="display:inline;">
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
             <p><?php the_title(); ?></p>
             </a>
-            <?php 
+            <?php
             $arg = array( 'parent' => 0);
             $terms = wp_get_object_terms( $post->ID, 'artiste', $arg );
             foreach($terms as $t): ?>
@@ -69,7 +69,7 @@
         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_random.svg" alt="*" height="90%" style="display:inline; margin:0 4% 0 1.8%">
         <?php } ?>
     </div>
-    
+
     <?php wp_reset_postdata();?>
 
 
@@ -78,7 +78,7 @@
     <div id="parents_container">
         <?php
         $object_terms_art = wp_get_object_terms($post->ID, 'artiste', array('parent' => 0));
-        if ($object_terms_art) { 
+        if ($object_terms_art) {
             foreach ($object_terms_art as $term_art) {
 				//print_r($term_art);
                 ?>
@@ -108,7 +108,7 @@
         }
         ?>
     </div>
-        
+
 <!--Contenu-->
 	<div id="quoi">
     	<p>L'Action</p>
@@ -120,12 +120,12 @@
     <div id="content_img">
     	<?php the_content(); ?>
     </div>
-    
-    
+
+
 <script>
 $('#content_img iframe').parent('p').replaceTag('<span>'), true;
 </script>
-    
+
 
 </body>
 </html>
@@ -174,7 +174,7 @@ font-style: normal;
 
 html {
 	/*font-size: 62.5%;*/
-	width:auto; height:100%;	
+	width:auto; height:100%;
 
 }
 
@@ -185,7 +185,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0px; 
+    width: 0px;
     background: transparent;
 }
 
@@ -199,16 +199,16 @@ a {
 }
 
 p, li {
-	color: #d84c29;	
+	color: #d84c29;
 }
 
 .bande_random {
-	height:14%; 
+	height:14%;
 	width:45%;
 	float: right;
 	display:flex;
 	display:-webkit-flex;
-	display:-moz-flex;	
+	display:-moz-flex;
 	justify-content: flex-end;
 	align-items: flex-end;
 	-webkit-justify-content: flex-end;
@@ -219,14 +219,14 @@ p, li {
 }
 .bande_random p {
 	font-size:0.75em;
-	font-family: ORATOR, Helvetica, sans-serif;	
+	font-family: ORATOR, Helvetica, sans-serif;
 }
 
 
 #titre {
-	background-color:#fdee71; color:#d84c29;
+	background-color:#f9df68; color:#d84c29;
 	display:table;
-	box-shadow:12px 0 0 #fdee71, -7px 0 0 #fdee71;
+	box-shadow:12px 0 0 #f9df68, -7px 0 0 #f9df68;
 	padding-top:5px;
 	margin-bottom: 5%;
 	font-family: ORATOR, Helvetica, sans-serif;
@@ -270,7 +270,7 @@ p, li {
 	margin-left:7%;
 	font-family: OCR_A, Helvetica, sans-serif;
 	font-size: 0.8em;
-	background-color: #fdee71;
+	background-color: #f9df68;
 	padding:2% 2% 0 2%;
 	margin-bottom:1%;
 }
@@ -315,16 +315,16 @@ p, li {
 	  display:inline;
 	  line-height:1.5em;
 	  box-shadow:8px 0 0 white, 0 0 0 white;
-	  font-family:newsGothic, Helvetica, sans-serif !important;	
+	  font-family:newsGothic, Helvetica, sans-serif !important;
 	  padding:1px 0;
 	  }
 
 #content_text audio {
 	display:block;
-	margin: 10px 0 10px 0;	
+	margin: 10px 0 10px 0;
 }
 #content_img > a, #content_img > p, #content_img > audio, #content_img > h1, #content_img > h2 {
-	display:none;	
+	display:none;
 }
 
 #content_img {
@@ -342,7 +342,7 @@ p, li {
 	width:100% !important;
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 	-webkit-filter: grayscale(100%);
-	filter: gray; 
+	filter: gray;
 }
 
 #content_img img:hover,
@@ -361,12 +361,10 @@ p, li {
 }
 
 audio {
-	visibility:visible !important;	
+	visibility:visible !important;
 }
 
-#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#fdee71; float:left; display:inline;}
+#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#f9df68; float:left; display:inline;}
 /*#retour:hover #back {display:inline;}*/
 
 </style>
-
-

@@ -20,7 +20,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
 <title><?php wp_title(); ?></title>
 <link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/picto_recit.svg">
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
-    
+
 </head>
 
 <body>
@@ -35,14 +35,14 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
         </a>
     </div>
 
-<!--Liste des lieux-->    
+<!--Liste des lieux-->
     <div id="action_container">
         <div id="action_container_flex">
                 <p class="action_list" style="color:#388ea5; font-size:1.25em;">Les paysages</p>
             <?php $terms=get_terms('lieu');?>
                 <?php foreach($terms as $t): ?>
                     <a href="<?php echo get_term_link($t->slug,'lieu');?>">
-                        <p style="background-color: #fdee71;font-family: ORATOR, Helvetica, sans-serif; margin: 10px 0 10px 10px">
+                        <p style="background-color: #f9df68;font-family: ORATOR, Helvetica, sans-serif; margin: 10px 0 10px 10px">
 							<?php echo $t->name;?>
                         </p>
                     </a>
@@ -53,15 +53,15 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
 
 <!--Picto+Titre_Lieu-->
 	<div id="titre_lieu">
-		<?php if (function_exists('z_taxonomy_image_url')); 
+		<?php if (function_exists('z_taxonomy_image_url'));
         echo '<img src="'.z_taxonomy_image_url().'" alt="" height="100px" width="auto" class="picto_lieu"/>'
         ?>
             <p style="border-top: solid 3px #388ea5; display:inline-block; padding-top:1.1%;"><?php wp_title(''); ?></p>
     </div>
-    
+
 
 	<div id="container">
-    
+
     <!--loop event-->
         <?php global $query_string;
         $posts = query_posts( $query_string . '&post_type=evenement' );
@@ -88,8 +88,8 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
               </a>
         <?php endwhile;?>
         <?php endif;?>
-        
-        
+
+
     <!--loop recit-->
     	<?php global $query_string;
         $posts = query_posts( $query_string . '&post_type=recit' );
@@ -113,7 +113,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
         <?php endwhile;?>
         <?php endif;?>
 
-        
+
     <!--loop action-->
         <?php global $query_string;
         $posts = query_posts( $query_string . '&post_type=action' );
@@ -144,10 +144,10 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
             </a>
         <?php endwhile; else:?>
         <?php endif;?>
-            
+
 	</div>
 
-    <script>	
+    <script>
 	$('#action_container').mouseenter (function() {
 		$('#action_container').stop().animate({left:'0'}, 'normal', 'swing');
 	});
@@ -155,7 +155,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
 		$('#action_container').animate({left:'-10.5%'}, 'normal', 'swing');
 	});
 	</script>
-        
+
 </body>
 </html>
 
@@ -192,7 +192,7 @@ font-style: normal;
 
 html {
 	/*font-size: 62.5%;*/
-	width:auto; height:100%;	
+	width:auto; height:100%;
 }
 
 body {
@@ -203,7 +203,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0px; 
+    width: 0px;
     background: transparent;
 }
 
@@ -228,10 +228,10 @@ a {
 }
 
 #container {
-	width:85%; 
-	height:70%; 
-	overflow:hidden; 
-	padding-left:14.7%;	
+	width:85%;
+	height:70%;
+	overflow:hidden;
+	padding-left:14.7%;
 }
 #container:hover {
 	overflow-y:auto;
@@ -250,7 +250,7 @@ a {
 
 .event{
 	padding:0 0.8% 5% 0.5%;
-	background-image:url(<?php bloginfo('stylesheet_directory');?>/img/fond_event.png);	
+	background-image:url(<?php bloginfo('stylesheet_directory');?>/img/fond_event.png);
 }
 
 .action{
@@ -260,7 +260,7 @@ a {
 
 .histoire {
 	padding:0 0.65% 5% 0.65%;
-	background-image:url(<?php bloginfo('stylesheet_directory');?>/img/fond_recit.png);	
+	background-image:url(<?php bloginfo('stylesheet_directory');?>/img/fond_recit.png);
 }
 
 .en_tete p {
@@ -286,7 +286,7 @@ a {
 }
 
 .artiste_action {
-	display:none;	
+	display:none;
 	font-size:0.8em;
 	font-family: ORATOR, Helvetica, sans-serif;
 	margin-top: 3.5%;
@@ -302,33 +302,33 @@ a {
 }
 
 .link_event :hover .resume_event {
-	display:inline;	
+	display:inline;
 }
 .link_event :hover .info_event {
-	display:none;	
+	display:none;
 }
 .link_event :hover .title_preview {
 	margin-bottom:5%;
 }
 
 .link_action :hover .thumb {
-	display:none;	
+	display:none;
 }
 .link_action :hover .title_preview {
-	display:none;	
+	display:none;
 }
 .link_action :hover .resume_event {
-	display:block;	
+	display:block;
 }
 .link_action :hover .artiste_action {
-	display:block;	
+	display:block;
 }
 
 
 .action_column {
 	display:flex;
 	display:-webkit-flex;
-	display:-moz-flex;	
+	display:-moz-flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
@@ -343,7 +343,7 @@ a {
 .event_column {
 	display:flex;
 	display:-webkit-flex;
-	display:-moz-flex;	
+	display:-moz-flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
@@ -358,21 +358,21 @@ a {
 .title_preview {
 	font-family:OCR_A, Helvetica, sans-serif;
 	font-size:1.35em;
-	display:block;	
+	display:block;
 	word-wrap: break-word;
 }
 
 .title_event {
 	margin-bottom:5%;
-	margin-top:5%;	
+	margin-top:5%;
 	text-align:center;
 	align-self:stretch;
 	-webkit-align-self:stretch;
 	-moz-align-self:stretch;
 }
 .title_event p {
-	box-shadow:10px 0 0 #fdee71, -7px 0 0 #fdee71 !important;
-	background-color: #fdee71 !important;
+	box-shadow:10px 0 0 #f9df68, -7px 0 0 #f9df68 !important;
+	background-color: #f9df68 !important;
 }
 
 .title_action {
@@ -409,10 +409,10 @@ a {
 }
 .thumb_img {
 	height:125px;
-	width:auto;	
+	width:auto;
 }
 
-#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#fdee71; float:right; display:block;}
+#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#f9df68; float:right; display:block;}
 /*#retour:hover #back {display:block;}*/
 #retour img {
   -moz-transform: scaleX(-1);    /* Gecko */
@@ -446,7 +446,7 @@ a {
 	font-size: 0.6em;
 	margin-top: 4%;
 	margin-bottom:1%;
-	background-color: #fdee71;
+	background-color: #f9df68;
 	padding:2%;
 	float:left;
 }

@@ -34,18 +34,18 @@
         </br>
         <p style="border-top: solid 3px #4b99ad; display:inline-block; padding-top:0.5%;">rendez-vous</p>
     </div>
-    
-<?php wp_reset_query(); ?>  
 
-  
+<?php wp_reset_query(); ?>
+
+
 <!--Contenu-->
     <div id="content">
     	<?php echo the_content(); ?>
     </div>
-    
+
 
 <!--Liste des 2 prochains événements + Current Post-->
-	<div class="events">    
+	<div class="events">
 		<?php
         $currentID = get_the_ID();
         $my_query = new WP_Query( array('post_type' => 'evenement', 'posts_per_page' => 2, 'numberposts' => 2, 'post__not_in' => array($currentID)));
@@ -53,7 +53,7 @@
         <div class="other_event">
             <a href="<?php the_permalink(); ?>">
         		<img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_event.svg" alt="*"/>
-                <p class="other_title"><?php the_title() ?></p>     
+                <p class="other_title"><?php the_title() ?></p>
                 <div class="other_info">
 					<?php echo types_render_field("lieu_event", array("show_name"=>"true","output"=>"html")); ?>
                     <?php echo types_render_field("date_event", array("show_name"=>"true","output"=>"html")); ?>
@@ -62,9 +62,9 @@
         </div>
         <?php endwhile; ?>
         <?php endif; ?>
-     
-    <?php wp_reset_query(); ?>  
-    
+
+    <?php wp_reset_query(); ?>
+
         <div id="title">
             <a href="<?php the_permalink(); ?>">
         		<img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_event.svg" alt="*">
@@ -75,14 +75,14 @@
                 </div>
             </a>
         </div>
-	</div>        
-<?php wp_reset_query(); ?>    
+	</div>
+<?php wp_reset_query(); ?>
 
 
     <script>
 		$('.other_event').mouseenter(function(){$('#title').delay(900).css('transform','scale(1)')});
 		$('.other_event').mouseleave(function(){$('#title').delay(900).css('transform','scale(1.25)')});
-		
+
 		$('.other_event').mouseenter(function(){$('#title_yellow').css({
 			'background-color':'transparent',
 			'box-shadow':'5px 0 0 transparent, -5px 0 0 transparent'
@@ -92,7 +92,7 @@
 			'background-color':'#fbec70',
 			'box-shadow':'5px 0 0 #fbec70, -5px 0 0 #fbec70'
 			})
-		});	  
+		});
 	</script>
 </body>
 </html>
@@ -129,7 +129,7 @@ font-style: normal;
 
 html {
 	/*font-size: 62.5%;*/
-	width:auto; height:100%;	
+	width:auto; height:100%;
 
 }
 
@@ -142,7 +142,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0px; 
+    width: 0px;
     background: transparent;
 }
 
@@ -190,7 +190,7 @@ a {
 	border:0;
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 	-webkit-filter: grayscale(100%);
-	filter: gray; 
+	filter: gray;
 }
 
 #content img:hover,
@@ -211,23 +211,23 @@ a {
 	  display:inline;
 	  line-height:1.5em;
 	  box-shadow:10px 0 0 #fbec70, -10px 0 0 #fbec70;
-	  font-family:newsGothic, Helvetica, sans-serif !important;	
+	  font-family:newsGothic, Helvetica, sans-serif !important;
 	  padding:1px 0;
 	  }
 
 #content audio {
 	display:block;
-	margin: 10px 0 10px 0;	
+	margin: 10px 0 10px 0;
 }
 audio {
-	visibility:visible !important;	
+	visibility:visible !important;
 }
 
 .events {
 	color:#4b99ad;
 	display:flex;
 	display:-webkit-flex;
-	display:-moz-flex;	
+	display:-moz-flex;
 	align-items: center;
 	justify-content: flex-start;
 	-webkit-align-items: center;
@@ -243,9 +243,9 @@ audio {
 
 .other_event img {
 	height:100px;
-	display:inline; 
-	margin:0 4% 0 1.8%; 
-	float:left;	
+	display:inline;
+	margin:0 4% 0 1.8%;
+	float:left;
 }
 
 .other_title {
@@ -265,9 +265,9 @@ audio {
 }
 #title img {
 	height:100px;
-	display:inline; 
-	margin:0 4% 0 1.8%; 
-	float:left;	
+	display:inline;
+	margin:0 4% 0 1.8%;
+	float:left;
 }
 
 #title #title_yellow {
@@ -281,7 +281,7 @@ audio {
 	  color:#4b99ad;
 }
 .other_event:hover {
-	transform: scale(1.25);	
+	transform: scale(1.25);
 }
 
 .other_event:hover .other_title {
@@ -292,7 +292,7 @@ audio {
 	  padding: 3px 0;
 }
 
-#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#fdee71; float:right; display:block;	}
+#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#f9df68; float:right; display:block;	}
 /*#retour:hover #back {display:block;}*/
 #retour img {
   -moz-transform: scaleX(-1);    /* Gecko */

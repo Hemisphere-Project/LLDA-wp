@@ -3,7 +3,7 @@ $(function () {
 	window.addEventListener('unload', function(e){
 		window.scrollTo(0, 0);
 	});
-	
+
 
 $('#go_scroll').click(function(){
 	var id_recent = $("#idpost").val();
@@ -14,7 +14,7 @@ $('#go_scroll').click(function(){
 	//alert(test);
 	if (screen_width < position){
 	var speed = 750; // Durée de l'animation (en ms)
-	$('html, body').animate({ scrollLeft: 
+	$('html, body').animate({ scrollLeft:
 	$("#"+test).offset().left -(screen_width/demi)}, speed ); // Go
 	} else {};
 });
@@ -25,19 +25,19 @@ $('#go_scroll').click(function(){
 		if(current && $(this).index()!=current.index()){
 			current.find('.bande_lieu').show().stop().slideToggle(200,'linear');
 		}
-		if(current && $(this).index==current.index()){ 
+		if(current && $(this).index==current.index()){
 			return null;
 		}
 		$(this).find('.bande_lieu').hide().stop().slideDown(200,'linear');
 		current=$(this);
 	});
-*/	
+*/
 	$('.signal').hover(function(){
 		$(this).find('.bande_lieu').hide().stop().slideDown(200,'linear'); return false;
 	},function(){
-		$(this).find('.bande_lieu').hide().stop().slideUp(200,'linear'); return false;	
+		$(this).find('.bande_lieu').hide().stop().slideUp(200,'linear'); return false;
 	});
-	
+
 
 /*	$('#button_info').click (function() {
 		$('#menu_info').animate({left:'0px'}, 'slow', 'swing', function(){$('.texte, .titre_info').slideDown('normal','swing');});
@@ -45,8 +45,8 @@ $('#go_scroll').click(function(){
 	$('#button_close').click (function() {
 		$('#menu_info').animate({left:'-830px'}, 'normal', 'swing', function(){$('.texte, .titre_info').slideUp('normal','swing');});
 	});
-*/	
-	
+*/
+
 
 	   $("body").mousewheel(function(event, delta) {
 		  this.scrollLeft -= (delta * 10);
@@ -59,10 +59,10 @@ $('#go_scroll').click(function(){
 				  event.preventDefault();
 				});
 		};
-		
+
 		$('.liste_carte').mouseover(function(){
 			$("body").unmousewheel();
-			
+
 		});
 		$('.liste_carte').mouseout(function(){
 			   $("body").mousewheel(function(event, delta) {
@@ -70,8 +70,8 @@ $('#go_scroll').click(function(){
 				  event.preventDefault();
 			   });
 		});
-		
-		
+
+
 		$('.info_container').mouseover(function(){
 			$("body").unmousewheel();
 		});
@@ -84,11 +84,11 @@ $('#go_scroll').click(function(){
 
 
 		$('.link_action').mouseenter(function(){
-			$(this).find('.thumb, .resume_event').css('display','block'); 
+			$(this).find('.thumb, .resume_event').css('display','block');
 			$(this).find('.title_action, .artiste_action, .info_event').css('display','none');
 		});
 		$('.link_action').mouseleave(function(){
-			$(this).find('.thumb, .resume_event').css('display','none'); 
+			$(this).find('.thumb, .resume_event').css('display','none');
 			$(this).find('.title_action, .artiste_action, .info_event').css('display','block');
 		});
 
@@ -123,7 +123,7 @@ $("#button_eventlist").click(function() {$(".liste_carte").css("display","none")
 $('#button_info_sup').click (function() {
 	$(".liste_carte").css("display","none");
 	//$("#button_menu").css('display','none');
-	$('#menu_info').animate({left:'0px'}, 'slow', 'swing', 
+	$('#menu_info').animate({left:'0px'}, 'slow', 'swing',
 		function(){$('.texte, .titre_info').slideDown('normal','swing');}
 	);
 });
@@ -157,7 +157,7 @@ $('.close_lieu').click(function prout() {
 	$('#button_menu').css('display','block');
 	return false;
 });
-	
+
 if ($('#opening').css('display','block')) {$("body").unmousewheel();};
 
 
@@ -186,7 +186,7 @@ $('.lieu').click(function(event){
 	$('#content').click (function() {
 		$('.liste_carte').animate({bottom:'-110px'}, 'normal', 'swing');
 	});
-	
+
  	$("#lien_open").click(function() { window.location="http://www.lelongdelaxe.net/evenement/terrainaccident/"; });
 	/*	$('.signal').mouseenter(function(){
 		$('.titre_picto').slideToggle(200,'linear');
@@ -196,11 +196,11 @@ $('.lieu').click(function(event){
 		$('.titre_picto').slideToggle(300,'linear');
 		$('.titre_lieu').fadeOut(100,'linear');
 	});
-*/	
+*/
 
 
 /*	console.log('HELLO SCRIPTO');
-		
+
 		$("a").click(function(){
 
 			jQuery.post(
@@ -212,9 +212,12 @@ $('.lieu').click(function(event){
 						$('.contenu_lieu').append(response);
 					}
 			);
-			
+
 		});
 */
 
-});
 
+console.log("MODIFS JEREMIE JUIN 2017");
+$("#map").draggable({containment: "body"});
+
+});
