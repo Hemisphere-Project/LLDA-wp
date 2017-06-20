@@ -61,6 +61,7 @@
 		<p style="border-top: solid 3px #844184; display:inline-block; padding-top:1.1%;">L'histoire</p>
     </div>
 
+
 <?php wp_reset_query(); ?>
 
 <!--Contenu-->
@@ -83,12 +84,14 @@
         	<p class="action_list" style="color:#844184; font-size:1.25em;">Les histoires</p>
 			<?php
             $currentID = get_the_ID();
-            $my_query = new WP_Query( array('post_type' => 'recit', 'post__not_in' => array($currentID), 'posts_per_page'=>'-1', 'numberposts'=>'100'));
+            // $my_query = new WP_Query( array('post_type' => 'recit', 'post__not_in' => array($currentID), 'posts_per_page'=>'-1', 'numberposts'=>'100'));
+            $my_query = new WP_Query( array('post_type' => 'recit', 'posts_per_page'=>'-1', 'numberposts'=>'100'));
             if ($my_query->have_posts()):while($my_query->have_posts()):$my_query->the_post();?>
             <div>
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                    <p class="action_list"><?php the_title() ?></p>
+                    <p class="action_list <?php if (get_the_ID()==$currentID){echo'action_active';}?>" ><?php the_title() ?></p>
                 </a>
+              <!-- <?php if (get_the_ID()==$currentID){echo'VOUS ICI';}?> -->
             </div>
             <?php endwhile; ?>
             <?php endif; ?>
@@ -313,6 +316,9 @@ audio {
 	background-color: #f9df68;
 	padding:2%;
 	float:left;
+}
+.action_active {
+	background-color: #fef5d8;
 }
 
 #back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#f9df68; float:right; display:block;}
