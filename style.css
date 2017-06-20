@@ -16,7 +16,7 @@ Description: Thème réalisé pour le projet Le Long de l'Axe de Komplex Kapharn
 */
 
 ::-webkit-scrollbar {
-	height: 8px; 
+	height: 8px;
 	width:8px;
     background: transparent;
 }
@@ -90,10 +90,10 @@ body {
 	background-repeat:no-repeat;
 	width:6211px;
 	height:auto;
-	
+
 }
 
-#content { 
+#content {
 	width: 100%;
 	height: 100%;
 }
@@ -135,12 +135,12 @@ body {
 	margin:0 auto;
 }
 .signal:hover {
-	cursor:pointer;	
+	cursor:pointer;
 }
 .signal:hover span {
 	display:flex;
 	display:-webkit-flex;
-	display:-moz-flex;	
+	display:-moz-flex;
 }
 
 .clignotant{
@@ -151,7 +151,7 @@ body {
 #menu_info {
 	width:45%;
 	height:100%;
-	background-color:#fdee71;	
+	background-color:#fdee71;
 	position:fixed;
 	left:-830px;
 	z-index:2;
@@ -168,7 +168,7 @@ body {
 	width:90%;
 	display:flex;
 	display:-webkit-flex;
-	display:-moz-flex;	
+	display:-moz-flex;
 	flex-direction: column;
 	justify-content:space-between;
 	align-items:center;
@@ -179,13 +179,13 @@ body {
 	-moz-justify-content:space-between;
 	-moz-align-items:center;
 	margin: 20px auto 0 auto;
-	
+
 	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
 	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
 	display: -ms-flexbox;  /* TWEENER - IE 10 */
 	display: -webkit-flex; /* NEW - Chrome */
 	display: flex;         /* NEW, Spec - Opera 12.1, Firefox 20+ */
-	
+
 	-webkit-box-align: center;
 	-webkit-flex-align: center;
 	-ms-flex-align: center;
@@ -208,7 +208,7 @@ html:lang(en)>body  .info_container {
 #liste_container {
 	display:flex;
 	display:-webkit-flex;
-	display:-moz-flex;	
+	display:-moz-flex;
 	justify-content:space-around;
 	align-items:stretch;
 	-webkit-justify-content:space-around;
@@ -216,7 +216,7 @@ html:lang(en)>body  .info_container {
 	-moz-justify-content:space-around;
 	-moz-align-items:stretch;
 	margin: 20px 10px;
-	
+
 }
 
 .post_it_orange {
@@ -224,7 +224,7 @@ html:lang(en)>body  .info_container {
     height: 70px;
 	display:flex;
 	display:-webkit-flex;
-	display:-moz-flex;	
+	display:-moz-flex;
 	flex-direction:column;
 	justify-content:space-around;
 	align-items:center;
@@ -248,7 +248,7 @@ html:lang(en)>body  .info_container {
 }
 
 #map {
-	height:80%;	
+	height:80%;
 }
 
 #button_menu {
@@ -259,12 +259,12 @@ html:lang(en)>body  .info_container {
 	z-index:10;
 }
 #button_menu p {
-	font-size: 3em;
+	font-size: 5em;
 	font-family: OCR_A, Helvetica, sans-serif;
 	margin:5px;
 	color:#fdee71;
 	border-top: solid 3px #fdee71;
-	padding-top:10px;	
+	padding-top:10px;
 	background-color:#FFF;
 	box-shadow:10px 0 0 #FFF, -10px 0 0 #FFF;
 }
@@ -276,7 +276,7 @@ html:lang(en)>body  .info_container {
 .bouton {
 	display:flex !important;
 	display:-webkit-flex !important;
-	display:-moz-flex !important;	
+	display:-moz-flex !important;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
@@ -301,22 +301,22 @@ html:lang(en)>body  .info_container {
 }
 
 #button_recitlist:hover {
-	background-color:#844184;	
+	background-color:#844184;
 }
 #button_artistelist:hover {
-	background-color:#d84c29;	
+	background-color:#d84c29;
 }
 #button_lieulist:hover {
-	background-color:#388ea5;	
+	background-color:#388ea5;
 }
 #button_recentlist:hover {
-	background-color:#cc6566;	
+	background-color:#cc6566;
 }
 #button_eventlist:hover {
-	background-color:#4b99ad;	
+	background-color:#4b99ad;
 }
 #button_info_sup:hover {
-	background-color:#fdee71;	
+	background-color:#fdee71;
 }
 
 #menu_barre {
@@ -327,7 +327,7 @@ html:lang(en)>body  .info_container {
 .flex {
 	display:flex;
 	display:-webkit-flex;
-	display:-moz-flex;	
+	display:-moz-flex;
     justify-content: space-around;
 	align-items: stretch;
     -webkit-justify-content: space-around;
@@ -421,7 +421,7 @@ html:lang(en)>body  .info_container {
 }
 
 .link_action :hover .title_preview {
-	display:none;	
+	display:none;
 }
 .preview {
 	background-repeat:repeat;
@@ -435,7 +435,7 @@ html:lang(en)>body  .info_container {
 }
 .histoire {
 	padding:0 0.65% 5% 0.65%;
-	background-image:url(img/fond_recit.png);	
+	background-image:url(img/fond_recit.png);
 }
 
 .action{
@@ -482,11 +482,11 @@ html:lang(en)>body  .info_container {
 }
 .thumb_img {
 	height:110px;
-	width:auto;	
+	width:auto;
 }
 .title_preview {
 	font-family:OCR_A, Helvetica, sans-serif;
-	display:block;	
+	display:block;
 	word-wrap: break-word;
 }
 .title_action {
@@ -516,7 +516,7 @@ html:lang(en)>body  .info_container {
 }
 .event{
 	padding:0 0.8% 5% 0.5%;
-	background-image:url(img/fond_event.png);	
+	background-image:url(img/fond_event.png);
 }
 .resume_event {
 	display:none;
@@ -541,7 +541,7 @@ html:lang(en)>body  .info_container {
 }
 .title_event {
 	margin-bottom:10px;
-	margin-top:10px;	
+	margin-top:10px;
 	text-align:center;
 	align-self:stretch;
 	-webkit-align-self:stretch;
@@ -594,7 +594,7 @@ html:lang(en)>body  .info_container {
 	text-align:center;
 	padding:8% 4% 3% 4%;
 	white-space: nowrap;
-	background-color:#FFF;	
+	background-color:#FFF;
 }
 .close_lieu {
 	position:absolute;
@@ -602,7 +602,7 @@ html:lang(en)>body  .info_container {
 	right:0;
 }
 .close_lieu:hover {
-	cursor:pointer;	
+	cursor:pointer;
 }
 
 .thumb2 {
@@ -624,7 +624,7 @@ html:lang(en)>body  .info_container {
 }
 .title_preview2 {
 	font-family:OCR_A, Helvetica, sans-serif;
-	display:block;	
+	display:block;
 	word-wrap: break-word;
 }
 .title_preview2 p {
@@ -651,16 +651,16 @@ html:lang(en)>body  .info_container {
 	display:block;
 }
 .contenu_lieu_recit:hover .thumb2 {
-	display:none;	
+	display:none;
 }
 .contenu_lieu_event:hover .resume_event {
-	display:block;	
+	display:block;
 }
 .contenu_lieu_event:hover .info_event {
-	display:none;	
+	display:none;
 }
 .contenu_lieu_event:hover .thumb2 {
-	display:none;	
+	display:none;
 }
 
 .contenu_lieu_event{
@@ -669,7 +669,7 @@ html:lang(en)>body  .info_container {
 -webkit-animation-iteration-count:4;
 -moz-animation-name: clignote;
 -moz-animation-duration: 1s;
--moz-animation-iteration-count:4;	
+-moz-animation-iteration-count:4;
 }
 
 .box_menu_barre{
@@ -679,9 +679,9 @@ html:lang(en)>body  .info_container {
 	align-items:stretch;
 	justify-content:space-around;
 	-webkit-align-items:stretch;
-	-webkit-justify-content:space-around;	
+	-webkit-justify-content:space-around;
 	-moz-align-items:stretch;
-	-moz-justify-content:space-around;	
+	-moz-justify-content:space-around;
 }
 
 #text_intro{
@@ -699,4 +699,3 @@ html:lang(en)>body  .info_container {
 #opening:hover {
 	overflow-y:auto;
 }
-
