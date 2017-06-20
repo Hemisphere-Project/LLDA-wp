@@ -77,6 +77,7 @@
 
     <div id="parents_container">
 			<p class="quoi_list">Fait par:</p>
+			<br>
         <?php
         $object_terms_art = wp_get_object_terms($post->ID, 'artiste', array('parent' => 0));
         if ($object_terms_art) {
@@ -270,7 +271,7 @@ p, li {
 	display:block;
 	margin-left:7%;
 	font-family: OCR_A, Helvetica, sans-serif;
-	font-size: 0.8em;
+	font-size: 1.1em;
 	background-color: #f9df68;
 	padding:2% 2% 0 2%;
 	margin-bottom:1%;
@@ -365,7 +366,7 @@ audio {
 	visibility:visible !important;
 }
 
-#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#f9df68; float:left; display:inline;}
-/*#retour:hover #back {display:inline;}*/
+#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 0%; font-size:1em; color:#f9df68; float:left; display:inline;}
+
 
 </style>

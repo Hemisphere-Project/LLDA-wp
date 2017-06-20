@@ -44,9 +44,9 @@
 <body>
 
 <!--Retour vers l'accueil-->
-    <div style="position:fixed; right:0; top:0; margin:15px 30px 0 0;" id="retour">
+    <div style="height:21%; width:50%; display:inline-block; position:fixed; top:0px;" id="retour">
     	<a href="<?php echo home_url(); ?>">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="display:inline; float:right;" height="70px"/>
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="margin:3% 0 0 3%; display:inline; float:left;" height="40%"/>
         <p id="back">
         Retour
         </p>
@@ -321,14 +321,8 @@ audio {
 	background-color: #fef5d8;
 }
 
-#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#f9df68; float:right; display:block;}
-/*#retour:hover #back {display:block;}*/
-#retour img {
-  -moz-transform: scaleX(-1);    /* Gecko */
-  -o-transform: scaleX(-1);      /* Opera */
-  -webkit-transform: scaleX(-1); /* Webkit */
-  transform: scaleX(-1);         /* Standard */
-  filter: FlipH;                 /* IE 6/7/8 */
-}
+#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 0%; font-size:1em; color:#f9df68; float:left; display:block;}
+
+
 
 </style>

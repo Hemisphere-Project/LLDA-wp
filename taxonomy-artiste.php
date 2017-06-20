@@ -58,7 +58,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
 <body>
 
 <!--Retour vers l'accueil-->
-    <div style="height:21%; width:36%; display:block;" id="retour">
+    <div style="height:21%; width:50%; display:block;" id="retour">
     	<a href="<?php echo home_url(); ?>">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="margin:3% 0 0 3%; display:inline; float:left;" height="40%"/>
         <p id="back">
@@ -395,7 +395,8 @@ p, li {
 #action_container {
 	height:65%;
 	width:auto;
-	max-width:200px;
+	/*max-width:200px;*/
+  width:17.5%;
 	display: inline-flex;
 	flex-direction:column;
 	display: -webkit-inline-flex;
@@ -412,16 +413,17 @@ p, li {
 
 #action_container p {
 	display:block;
-	float:right;
+  margin-left:7%;
 }
 
 .action_list {
 	font-family: OCR_A, Helvetica, sans-serif;
-	font-size: 0.6em;
+	font-size: 0.7em;
 	margin-top: 4%;
 	margin-bottom:1%;
-	background-color: #f9df68;
+	/*background-color: #f9df68;*/
 	padding:2%;
+
 }
 
 .episode {
@@ -433,7 +435,6 @@ p, li {
 	background-color: #f9df68;
 	padding:2% 2% 0 2%;
 	margin-bottom:1%;
-	text-align:right;
 }
 
 /*.img_action_lieu {
@@ -556,7 +557,7 @@ audio {
 	margin: 2% auto;
 }
 
-#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#f9df68; float:left; display:inline;}
-/*#retour:hover #back {display:inline;}*/
+#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 0%; font-size:1em; color:#f9df68; float:left; display:inline;}
+
 
 </style>
