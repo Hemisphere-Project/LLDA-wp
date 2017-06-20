@@ -1,4 +1,3 @@
-
 <?php
 
 add_theme_support( 'post-thumbnails' );
@@ -147,19 +146,19 @@ add_action('wp_ajax_nopriv_myfunc', 'myfunc');
 add_action('wp_ajax_myfunc', 'myfunc');
 
 function myfunc() {
-	
+
                 $args = array(
                 'post_type' => 'action',
                 'lieu' => $term->slug,
 				'numberposts' => 4,
                 );
 				$query = new WP_Query( $args );
-     			while ( $query->have_posts() ) : $query->the_post();?> 
+     			while ( $query->have_posts() ) : $query->the_post();?>
                 <h3><?php the_title(); ?></h3>
                 <p><?php the_excerpt(); ?></p>
-                
+
 				<?php endwhile;
-				wp_reset_postdata(); 
+				wp_reset_postdata();
 
 	die();
 
