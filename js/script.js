@@ -223,6 +223,14 @@ $('.lieu').click(function(event){
 
 
 console.log("MODIFS JEREMIE JUIN 2017");
-// $("#map").draggable({containment: "body"});
+
+/////////////// SCAN HASHTAG
+var hash = window.location.hash;
+if (hash=='#action'){$("#recentlist").css("display","block");}
+if (hash=='#evenement') {$("#eventlist").css("display","block");}
+if (hash=='#recit') {$("#recitlist").css("display","block");}
+if (hash=='#complices') {$("#artistelist").css("display","block");}
+///////////////
+
 
 });

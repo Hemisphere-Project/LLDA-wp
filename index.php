@@ -158,7 +158,7 @@
         if ($my_query->have_posts()):while($my_query->have_posts()):$my_query->the_post();?>
             <a href="<?php the_permalink(); ?>">
                 <div class="box_artiste">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_recit_purple.svg" alt="*" style="float:left;"/>
+                    <!-- <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_recit_purple.svg" alt="*" style="float:left;"/> -->
                         <p style="color:#844184;"><?php the_title() ?></p>
                  </div>
              </a>
@@ -230,7 +230,7 @@
             <?php foreach($terms as $t): ?>
                 <a href="<?php echo get_term_link($t->slug,'artiste');?>">
                     <div class="box_artiste">
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_random.svg" alt="*" style="float:left;"/>
+                        <!-- <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_random.svg" alt="*" style="float:left;"/> -->
                         <p style="color:#d84c29;"><?php echo $t->name;?></p>
                     </div>
                 </a>

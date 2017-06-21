@@ -59,7 +59,7 @@ add_filter( 'wp_title', 'title_remove_tax_name', 10, 3 ); ?>
 
 <!--Retour vers l'accueil-->
     <div style="height:21%; width:50%; display:block;" id="retour">
-    	<a href="<?php echo home_url(); ?>">
+    	<a href="<?php echo home_url(); ?>#complices">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="margin:3% 0 0 3%; display:inline; float:left;" height="40%"/>
         <p id="back">
         Retour

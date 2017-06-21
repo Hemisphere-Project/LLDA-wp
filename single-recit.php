@@ -45,7 +45,7 @@
 
 <!--Retour vers l'accueil-->
     <div style="height:21%; width:50%; display:inline-block; position:fixed; top:0px;" id="retour">
-    	<a href="<?php echo home_url(); ?>">
+    	<a href="<?php echo home_url(); ?>#recit">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="margin:3% 0 0 3%; display:inline; float:left;" height="40%"/>
         <p id="back">
         Retour
