@@ -170,56 +170,16 @@ $('.lieu').click(function(event){
     event.stopPropagation();
 });
 
-/*$("a[href^='#']").click(function (e) {
-	e.preventDefault(); // On annule le comportement initial.
-	window.location.hash = $(this).attr("href"); // On change le hash de l'adresse.
-});*/
 
-    /*$("a").click(function( event ) {
-          if ( $(this).attr("href").match("#") ) {
-          event.preventDefault();
-          var href = $(this).attr('href').replace('#', '')
-          scrollToAnchor( href );}
-    });
-*/
-	$('.liste_carte').mouseenter (function() {
-		$('.liste_carte').stop().animate({bottom:'5px'}, 'normal', 'swing');
-	});
-	/*$('.liste_carte').mouseleave (function() {
-		$('.liste_carte').animate({bottom:'-110px'}, 'normal', 'swing');
-	});*/
-	$('#content').click (function() {
-		$('.liste_carte').animate({bottom:'-110px'}, 'normal', 'swing');
-	});
+///////////////// HIDE-SHOW MENU DU BAS
+	// $('.liste_carte').mouseenter (function() {
+	// 	$('.liste_carte').stop().animate({bottom:'5px'}, 'normal', 'swing');
+	// });
+	// $('#content').click (function() {
+	// 	$('.liste_carte').animate({bottom:'-110px'}, 'normal', 'swing');
+	// });
+////////////////////
 
- 	$("#lien_open").click(function() { window.location="http://www.lelongdelaxe.net/evenement/terrainaccident/"; });
-	/*	$('.signal').mouseenter(function(){
-		$('.titre_picto').slideToggle(200,'linear');
-		$('.titre_lieu').fadeIn(100,'linear');
-	});
-	$('.signal').mouseout(function(){
-		$('.titre_picto').slideToggle(300,'linear');
-		$('.titre_lieu').fadeOut(100,'linear');
-	});
-*/
-
-
-/*	console.log('HELLO SCRIPTO');
-
-		$("a").click(function(){
-
-			jQuery.post(
-					ajaxurl,
-					{
-							'action': 'myfunc',
-					},
-					function(response){
-						$('.contenu_lieu').append(response);
-					}
-			);
-
-		});
-*/
 
 
 console.log("MODIFS JEREMIE JUIN 2017");
@@ -228,7 +188,7 @@ console.log("MODIFS JEREMIE JUIN 2017");
 var hash = window.location.hash;
 if (hash=='#action'){$("#recentlist").css("display","block");}
 if (hash=='#evenement') {$("#eventlist").css("display","block");}
-if (hash=='#recit') {$("#recitlist").css("display","block");}
+if (hash=='#histoire') {$("#recitlist").css("display","block");}
 if (hash=='#complices') {$("#artistelist").css("display","block");}
 ///////////////
 
