@@ -161,6 +161,7 @@ body {
 	left:-830px;
 	z-index:2;
 	/*padding:55px 10px 30px 10px;*/
+	visibility:hidden;
 }
 
 #header_button_info input {

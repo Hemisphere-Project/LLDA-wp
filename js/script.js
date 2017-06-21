@@ -120,18 +120,23 @@ $("#button_artistelist").click(function() {$(".liste_carte").css("display","none
 $("#button_lieulist").click(function() {$(".liste_carte").css("display","none");$("#lieulist").css("display","block")});
 $("#button_recentlist").click(function() {$(".liste_carte").css("display","none");$("#recentlist").css("display","block")});
 $("#button_eventlist").click(function() {$(".liste_carte").css("display","none");$("#eventlist").css("display","block")});
+
+///////// MENU INFO
 $('#button_info_sup').click (function() {
 	$(".liste_carte").css("display","none");
-	//$("#button_menu").css('display','none');
+	$("#menu_info").css('visibility','visible');
 	$('#menu_info').animate({left:'0px'}, 'slow', 'swing',
 		function(){$('.texte, .titre_info').slideDown('normal','swing');}
 	);
 });
 
 $('#button_close').click (function() {
-	$('#menu_info').animate({left:'-830px'}, 'normal', 'swing', function(){$('.texte, .titre_info').slideUp('normal','swing'); $("#button_menu").css('display','block');});
+	$('#menu_info').animate({left:'-830px'}, 'normal', 'swing', function(){
+		$('.texte, .titre_info').slideUp('normal','swing'); $("#button_menu").css('display','block');
+		$("#menu_info").css('visibility','hidden');
+	});
 });
-
+//////////// -------
 
 
 $(".lieu").click(function(){$(".contenu_lieu").css("display","none");$("body").unmousewheel(); $(this).children(".contenu_lieu").css("display","block");$("#menu_barre").css("display","none")});
