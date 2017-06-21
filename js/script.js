@@ -223,6 +223,6 @@ $('.lieu').click(function(event){
 
 
 console.log("MODIFS JEREMIE JUIN 2017");
-$("#map").draggable({containment: "body"});
+// $("#map").draggable({containment: "body"});
 
 });

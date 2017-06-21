@@ -102,11 +102,11 @@
 
     	<div class="box_menu_barre">
             <div id="button_eventlist" class="bouton preview" style="border:solid 3px #4b99ad;">
-                <p style="color:#4b99ad;">Prochains</br>rendez-vous</p>
+                <p style="color:#4b99ad;">Actions à venir</p>
             </div>
 
             <div id="button_recentlist" class="bouton preview" style="border:solid 3px #cc6566;">
-                <p style="color:#cc6566;">Actions Passees</p>
+                <p style="color:#cc6566;">Actions passees</p>
             </div>
 
             <div id="button_info_sup" class="bouton preview" style="border:solid 3px #f9df68; margin-right:0;">
@@ -119,7 +119,7 @@
     <div id="eventlist" class="liste_carte">
         <div class="flex">
             <div class="title_button" style="color:#4b99ad; background-image:url(<?php bloginfo('stylesheet_directory'); ?>/img/fond_event.png); width:250px;">
-                <p>Prochains rendez-vous</p>
+                <p>Actions à venir</p>
             </div>
 		<?php
         $my_query = new WP_Query( array('post_type' => 'evenement', 'posts_per_page' => 3, 'numberposts' => 3));

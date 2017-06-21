@@ -1,26 +1,47 @@
-<!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title><?php wp_title(); ?></title>
 <link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/picto_recit.svg">
-
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
 <script>
-	$("#content img").mouseenter(function(){
-	$("#content img").removeClass("active");
+	$.extend({
+		replaceTag: function (currentElem, newTagObj, keepProps) {
+			var $currentElem = $(currentElem);
+			var i, $newTag = $(newTagObj).clone();
+			if (keepProps) {//{{{
+				newTag = $newTag[0];
+				newTag.className = currentElem.className;
+				$.extend(newTag.classList, currentElem.classList);
+				$.extend(newTag.attributes, currentElem.attributes);
+			}//}}}
+			$currentElem.wrapAll($newTag);
+			$currentElem.contents().unwrap();
+			// return node; (Error spotted by Frank van Luijn)
+			return this; // Suggested by ColeLawrence
+		}
+	});
+
+	$.fn.extend({
+		replaceTag: function (newTagObj, keepProps) {
+			// "return" suggested by ColeLawrence
+			return this.each(function() {
+				jQuery.replaceTag(this, newTagObj, keepProps);
+			});
+		}
+	});
+	$("#content_img img").mouseenter(function(){
+	$("#content_img img").removeClass("active");
 	$(this).addClass("active");
 	});
 </script>
-
 </head>
-
 <body>
 
+
 <!--Retour vers l'accueil-->
-    <div style="position:fixed; right:0; top:0; margin:15px 30px 0 0;" id="retour">
+    <div style="height:21%; width:50%; display:inline-block;" id="retour">
     	<a href="<?php echo home_url(); ?>">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="display:inline; float:right;" height="70px"/>
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="margin:3% 0 0 3%; display:inline; float:left;" height="40%"/>
         <p id="back">
         Retour
         </p>
@@ -28,72 +49,28 @@
     </div>
 
 
-<!--en_Tête-->
-	<div id="RDV">
-		<p style="border-top: solid 3px #4b99ad; display:inline-block; padding-top:0.5%; padding-bottom:0.5%;">Prochains</p>
-        </br>
-        <p style="border-top: solid 3px #4b99ad; display:inline-block; padding-top:0.5%;">rendez-vous</p>
-    </div>
 
-<?php wp_reset_query(); ?>
+    <!-- <?php wp_reset_postdata();?> -->
 
 
 <!--Contenu-->
-    <div id="content">
-    	<?php echo the_content(); ?>
+	<div id="quoi">
+    	<p>L'action à venir</p>
+    </div>
+    <div id="content_text">
+        <a href="<?php the_permalink(); ?>"><span id="titre"><?php the_title();?></span></a>
+    	<div style="background-color: rgba(255, 255, 255, 0.8);padding:10px;"><?php the_content(); ?></div>
+    </div>
+    <div id="content_img">
+    	<?php the_content(); ?>
     </div>
 
 
-<!--Liste des 2 prochains événements + Current Post-->
-	<div class="events">
-		<?php
-        $currentID = get_the_ID();
-        $my_query = new WP_Query( array('post_type' => 'evenement', 'posts_per_page' => 2, 'numberposts' => 2, 'post__not_in' => array($currentID)));
-        if ($my_query->have_posts()):while($my_query->have_posts()):$my_query->the_post();?>
-        <div class="other_event">
-            <a href="<?php the_permalink(); ?>">
-        		<img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_event.svg" alt="*"/>
-                <p class="other_title"><?php the_title() ?></p>
-                <div class="other_info">
-					<?php echo types_render_field("lieu_event", array("show_name"=>"true","output"=>"html")); ?>
-                    <?php echo types_render_field("date_event", array("show_name"=>"true","output"=>"html")); ?>
-                </div>
-            </a>
-        </div>
-        <?php endwhile; ?>
-        <?php endif; ?>
-
-    <?php wp_reset_query(); ?>
-
-        <div id="title">
-            <a href="<?php the_permalink(); ?>">
-        		<img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_event.svg" alt="*">
-                <p id="title_yellow"><?php the_title();?></p>
-                <div class="other_info">
-                	<?php echo types_render_field("lieu_event", array("show_name"=>"true","output"=>"html")); ?>
-                	<?php echo types_render_field("date_event", array("show_name"=>"true","output"=>"html")); ?>
-                </div>
-            </a>
-        </div>
-	</div>
-<?php wp_reset_query(); ?>
+<script>
+$('#content_img iframe').parent('p').replaceTag('<span>'), true;
+</script>
 
 
-    <script>
-		$('.other_event').mouseenter(function(){$('#title').delay(900).css('transform','scale(1)')});
-		$('.other_event').mouseleave(function(){$('#title').delay(900).css('transform','scale(1.25)')});
-
-		$('.other_event').mouseenter(function(){$('#title_yellow').css({
-			'background-color':'transparent',
-			'box-shadow':'5px 0 0 transparent, -5px 0 0 transparent'
-			})
-		});
-		$('.other_event').mouseleave(function(){$('#title_yellow').css({
-			'background-color':'#fbec70',
-			'box-shadow':'5px 0 0 #fbec70, -5px 0 0 #fbec70'
-			})
-		});
-	</script>
 </body>
 </html>
 
@@ -127,6 +104,18 @@ font-weight: normal;
 font-style: normal;
 }
 
+@font-face {
+font-family: 'newsGothic';
+src: url('<?php bloginfo('stylesheet_directory');?>/fonts/newsgothic/NewsGothicStd.eot');
+src: url('<?php bloginfo('stylesheet_directory');?>/fonts/newsgothic/NewsGothicStd.otf') format('truetype'),
+     url('<?php bloginfo('stylesheet_directory');?>/fonts/newsgothic/NewsGothicStd.woff') format('woff'),
+     url('<?php bloginfo('stylesheet_directory');?>/fonts/newsgothic/NewsGothicStd.eot?#iefix') format('embedded-opentype'),
+     url('<?php bloginfo('stylesheet_directory');?>/fonts/newsgothic/NewsGothicStd.svg#QuadrantaBold') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+
 html {
 	/*font-size: 62.5%;*/
 	width:auto; height:100%;
@@ -135,10 +124,8 @@ html {
 
 body {
 	height: 100%;
-	overflow:hidden;
-	background-image:url(<?php bloginfo('stylesheet_directory'); ?>/img/fond_event_carte.png);
-	background-repeat:no-repeat;
-	background-size: 100%;
+	background-image:url(<?php bloginfo('stylesheet_directory'); ?>/img/fond_blanc.png);
+	background-repeat:repeat;
 }
 
 ::-webkit-scrollbar {
@@ -153,153 +140,177 @@ body {
 a {
 	text-decoration:none;
 	color:#4b99ad;
-	z-index:10;
 }
 
-#RDV {
-	margin-top:2.5%;
-	margin-left:5.5%;
-	font-family: OCR_A, Helvetica, sans-serif;
-	font-size: 1.35em;
-	color:#4b99ad;
-	background-color:white;
+p, li {
+	color: #4b99ad;
 }
 
-#content {
-	width:43%;
-	padding-right:5.2%;
-	padding-left:0.5%;
-	height:50%;
+.bande_random {
+	height:14%;
+	width:45%;
+	float: right;
+	display:flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	-webkit-justify-content: flex-end;
+	-webkit-align-items: flex-end;
+	-moz-justify-content: flex-end;
+	-moz-align-items: flex-end;
+	padding:0 4% 2% 1%;
+}
+.bande_random p {
+	font-size:0.75em;
+	font-family: ORATOR, Helvetica, sans-serif;
+}
+
+
+#titre {
+	background-color:#f9df68; color:#4b99ad;
+	display:table;
+	box-shadow:12px 0 0 #f9df68, -7px 0 0 #f9df68;
+	padding-top:5px;
+	margin-bottom: 5%;
+	font-family: ORATOR, Helvetica, sans-serif;
+	letter-spacing: 2px;
+	font-size:1.75em;
+}
+
+#parents_container {
+	height:65%;
+	width:17.5%;
+	display: inline-flex;
+	flex-direction:column;
+	display: -webkit-inline-flex;
+	-webkit-flex-direction:column;
+	display: -moz-inline-flex;
+	-moz-flex-direction:column;
 	overflow-y: hidden;
-	z-index:2;
-	color:#226979;
-	margin-left:5.5%;
-	margin-top:1.7%;
-	font-size: 1em;
-	text-transform:uppercase;
-	background-color:rgba(255,255,255,0.6);
+	padding-bottom:5%;
 }
 
-#content:hover {
+#parents_container:hover {
 	overflow-y:auto;
 }
 
-#content img {
-	width:90%; height:auto;
-	margin:3% auto;
-	border:0;
+#parents_container p {
+	display:block;
+	float:left;
+}
+
+.parents_list {
+	font-family: OCR_A, Helvetica, sans-serif;
+	font-size: 0.7em;
+	margin-bottom:4%;
+	margin-left:7%;
+	padding:2%;
+}
+
+.quoi_list {
+	float:left;
+	display:block;
+	margin-left:7%;
+	font-family: OCR_A, Helvetica, sans-serif;
+	font-size: 1.1em;
+	background-color: #f9df68;
+	padding:2% 2% 0 2%;
+	margin-bottom:1%;
+}
+
+#quoi {
+	position:absolute; left:19.5%; top:7%;
+	padding-top:1%;
+	z-index:3;
+	border-top: solid 3px #4b99ad;
+	font-family: OCR_A, Helvetica, sans-serif !important;
+	font-size: 1.3em;
+}
+
+
+#content_text {
+	background-image:url(<?php bloginfo('stylesheet_directory');?>/img/fond_event.png);
+	background-repeat:repeat;
+	width:28%;
+	padding-right:9.5%;
+	padding-left:1%;
+	height:72%;
+	overflow-y: hidden;
+	position:absolute;
+	z-index:2;
+	left:19.5%;
+	top:22%;
+}
+
+#content_text:hover {
+	overflow-y:auto;
+}
+
+#content_text img {
+	display:none;
+}
+#content_text iframe {
+	display:none;
+}
+
+#content_text p {
+	  background-color:white;
+	  display:inline;
+	  line-height:1.5em;
+	  box-shadow:8px 0 0 white, 0 0 0 white;
+	  font-family:newsGothic, Helvetica, sans-serif !important;
+	  padding:1px 0;
+	  }
+
+#content_text audio {
+	display:block;
+	margin: 10px 0 10px 0;
+}
+#content_img > a, #content_img > p, #content_img > audio, #content_img > h1, #content_img > h2 {
+	display:none;
+}
+
+#content_img {
+	width:44%;
+	display:inline;
+	float:right;
+	padding:0;
+	overflow:hidden;
+	height:77%;
+	position: absolute;
+  top: 22%;
+}
+
+#content_img img {
+	height:auto !important;
+	border: 0;
+	width:100% !important;
 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 	-webkit-filter: grayscale(100%);
 	filter: gray;
 }
 
-#content img:hover,
-#content img:focus,
-#content img.active {
+#content_img img:hover,
+#content_img img:focus,
+#content_img img.active {
   filter: none;
-  -webkit-filter: grayscale(0);
+  -webkit-filter: grayscale(0) !important;
 
 }
 
-#content iframe {
-	margin:3% auto;
+#content_img:hover {
+	overflow-y:scroll;
+}
+#content_img iframe {
+	margin: 2% auto;
 }
 
-
-#content p {
-	  background-color:#fbec70;
-	  display:inline;
-	  line-height:1.5em;
-	  box-shadow:10px 0 0 #fbec70, -10px 0 0 #fbec70;
-	  font-family:newsGothic, Helvetica, sans-serif !important;
-	  padding:1px 0;
-	  }
-
-#content audio {
-	display:block;
-	margin: 10px 0 10px 0;
-}
 audio {
 	visibility:visible !important;
 }
 
-.events {
-	color:#4b99ad;
-	display:flex;
-	display:-webkit-flex;
-	display:-moz-flex;
-	align-items: center;
-	justify-content: flex-start;
-	-webkit-align-items: center;
-	-webkit-justify-content: flex-start;
-	-moz-align-items: center;
-	-moz-justify-content: flex-start;
-	margin:3% 0 0 5.5%;
-}
+#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 0%; font-size:1em; color:#f9df68; float:left; display:inline;}
 
-.other_event {
-	margin-right:3.6%;
-}
-
-.other_event img {
-	height:100px;
-	display:inline;
-	margin:0 4% 0 1.8%;
-	float:left;
-}
-
-.other_title {
-	font-family:OCR_A, Helvetica, sans-serif;
-	font-size: 1.3em;
-	color:#4b99ad;
-}
-.other_info {
-	font-family:ORATOR, Helvetica, sans-serif;
-	font-size: 1em;
-	color:#4b99ad;
-}
-
-#title {
-	transform: scale(1.25);
-	margin-right:3.6%;
-}
-#title img {
-	height:100px;
-	display:inline;
-	margin:0 4% 0 1.8%;
-	float:left;
-}
-
-#title #title_yellow {
-	  background-color:#fbec70;
-	  display:inline;
-	  line-height:1.5em;
-	  box-shadow:5px 0 0 #fbec70, -5px 0 0 #fbec70;
-	  padding: 3px 0;
-	  font-family:OCR_A, Helvetica, sans-serif;
-	  font-size: 1.3em;
-	  color:#4b99ad;
-}
-.other_event:hover {
-	transform: scale(1.25);
-}
-
-.other_event:hover .other_title {
-	  background-color:#fbec70;
-	  display:inline;
-	  line-height:1.5em;
-	  box-shadow:5px 0 0 #fbec70, -5px 0 0 #fbec70;
-	  padding: 3px 0;
-}
-
-#back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 2%; font-size:1em; color:#f9df68; float:right; display:block;	}
-/*#retour:hover #back {display:block;}*/
-#retour img {
-  -moz-transform: scaleX(-1);    /* Gecko */
-  -o-transform: scaleX(-1);      /* Opera */
-  -webkit-transform: scaleX(-1); /* Webkit */
-  transform: scaleX(-1);         /* Standard */
-  filter: FlipH;                 /* IE 6/7/8 */
-}
 
 </style>
