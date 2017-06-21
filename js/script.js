@@ -92,11 +92,21 @@ $('#go_scroll').click(function(){
 			$(this).find('.title_action, .artiste_action, .info_event').css('display','block');
 		});
 
-//$("#button_menu").click(function() {$("#menu_barre").slideToggle(500,'linear').toggle(display)});
-$("#button_menu").click(function() {$(".contenu_lieu").css("display","none"),$("#menu_barre").css("display","block"),$("#button_menu").css("display","none")});
-$('#content').click(function() {
-	$("#menu_barre").css("display","none"),$("#button_menu").css("display","block")
+////////////////////// MENU
+$("#button_menu").click(function() {
+	$(".contenu_lieu").css("display","none");
+	// $("#menu_barre").css("display","block");
+	$("#menu_barre").fadeIn(100);
+	$("#button_menu").css("display","none");
+	$(".liste_carte").fadeOut(200);
 });
+
+$('#content').click(function() {
+	// $("#menu_barre").css("display","none");
+	$("#menu_barre").fadeOut(100);
+	$("#button_menu").css("display","block");
+});
+//////////////////////
 
 $('#button_menu').click(function(event){
     event.stopPropagation();
@@ -115,11 +125,11 @@ $('.liste_carte').click(function(event){
 //$(".title_button").click(function(){$(".title_button").css("display","none")});
 $(".bouton").click(function() {$("#menu_barre").css('display','none'),$("#button_menu").css('display','block')});
 
-$("#button_recitlist").click(function() {$(".liste_carte").css("display","none");$("#recitlist").css("display","block")});
-$("#button_artistelist").click(function() {$(".liste_carte").css("display","none");$("#artistelist").css("display","block")});
-$("#button_lieulist").click(function() {$(".liste_carte").css("display","none");$("#lieulist").css("display","block")});
-$("#button_recentlist").click(function() {$(".liste_carte").css("display","none");$("#recentlist").css("display","block")});
-$("#button_eventlist").click(function() {$(".liste_carte").css("display","none");$("#eventlist").css("display","block")});
+$("#button_recitlist").click(function() {$(".liste_carte").css("display","none");$("#recitlist").fadeIn(200);});
+$("#button_artistelist").click(function() {$(".liste_carte").css("display","none");$("#artistelist").fadeIn(200);});
+$("#button_lieulist").click(function() {$(".liste_carte").css("display","none");$("#lieulist").fadeIn(200);});
+$("#button_recentlist").click(function() {$(".liste_carte").css("display","none");$("#recentlist").fadeIn(200);});
+$("#button_eventlist").click(function() {$(".liste_carte").css("display","none");$("#eventlist").fadeIn(200);});
 
 ///////// MENU INFO
 $('#button_info_sup').click (function() {
@@ -154,7 +164,8 @@ $('body').click(function () {
 });
 
 $('.close_lieu').click(function prout() {
-	$(".contenu_lieu").css("display","none");
+	// $(".contenu_lieu").css("display","none");
+	$(".contenu_lieu").fadeOut(100);
 	$("body").mousewheel(function(event, delta) {
 	  this.scrollLeft -= (delta * 10);
 	  event.preventDefault();
@@ -177,6 +188,12 @@ $('.lieu').click(function(event){
 	// });
 	// $('#content').click (function() {
 	// 	$('.liste_carte').animate({bottom:'-110px'}, 'normal', 'swing');
+	// });
+////////////////////
+
+///////////////// HIDE-SHOW MENU DU BAS V2
+	// $('#content').click (function() {
+	// 	$('.liste_carte').fadeOut(200);
 	// });
 ////////////////////
 

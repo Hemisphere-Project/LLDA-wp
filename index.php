@@ -87,7 +87,7 @@
     <div id="menu_barre" class="contenu_lieu" style="padding-bottom:4.5%; padding-top:5%;">
         <input type="image" src="<?php bloginfo('stylesheet_directory'); ?>/img/bouton_close.svg" class="close_lieu" width="40px" />
     	<div class="box_menu_barre">
-            <div id="button_recitlist" class="bouton preview" style="border:solid 3px #844184;">
+            <div id="button_recitlist" class="bouton" style="border:solid 3px #844184;">
                 <p style="color:#844184;">L'histoire</p>
             </div>
 
@@ -95,24 +95,26 @@
                 <p style="color:#388ea5;">Les paysages</p>
             </div> -->
 
-            <div id="button_artistelist" class="bouton preview" style="border:solid 3px #d84c29; margin-right:0;">
+            <div id="button_artistelist" class="bouton" style="border:solid 3px #d84c29; margin-right:0;">
                 <p style="color:#d84c29;">Les complices</p>
             </div>
         </div>
 
     	<div class="box_menu_barre">
-            <div id="button_eventlist" class="bouton preview" style="border:solid 3px #4b99ad;">
+            <div id="button_eventlist" class="bouton" style="border:solid 3px #4b99ad;">
                 <p style="color:#4b99ad;">Actions à venir</p>
             </div>
 
-            <div id="button_recentlist" class="bouton preview" style="border:solid 3px #cc6566;">
+            <div id="button_recentlist" class="bouton" style="border:solid 3px #cc6566;">
                 <p style="color:#cc6566;">Actions passees</p>
             </div>
-
-            <div id="button_info_sup" class="bouton preview" style="border:solid 3px #f9df68; margin-right:0;">
-                <p style="color:#f9df68;">Qui sommes-nous?</p>
-            </div>
         </div>
+
+        <div class="box_menu_barre">
+              <div id="button_info_sup" class="bouton" style="border:solid 3px #f9df68; margin-right:0;">
+                  <p style="color:#f9df68;">Qui sommes-nous?</p>
+              </div>
+          </div>
     </div>
 
 	<!--Liste des 3 prochains événements-->
