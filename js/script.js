@@ -207,7 +207,23 @@ if (hash=='#action'){$("#recentlist").css("display","block");}
 if (hash=='#evenement') {$("#eventlist").css("display","block");}
 if (hash=='#histoire') {$("#recitlist").css("display","block");}
 if (hash=='#complices') {$("#artistelist").css("display","block");}
-///////////////
+
+
+/////////////// ARROWS LEFT RIGHT
+$('#moveright').mousedown(function() {
+var s = $(document).scrollLeft();
+$('body').stop().animate( { scrollLeft: s+1000 }, {duration:500, easing: 'easeOutCubic' });
+});
+$('#moveleft').mousedown(function() {
+var s = $(document).scrollLeft();
+$('body').stop().animate( { scrollLeft: s-1000 }, {duration:500, easing: 'linear' });
+});
+
+//////////////// JQUERY UI DRAGGABLE
+// $("#content").draggable({
+// 	axis: "x",
+// 	containment: ''
+// });
 
 
 });

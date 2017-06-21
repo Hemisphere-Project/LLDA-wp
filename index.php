@@ -13,6 +13,8 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mousewheel.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
     <!--<script>
 	$(document).ready(function () {
 		if (localStorage.getItem('wasVisited') !== undefined) {
@@ -115,6 +117,14 @@
                   <p style="color:#f9df68;">Qui sommes-nous?</p>
               </div>
           </div>
+    </div>
+
+  	<!--MOVE-->
+    <div id='moveleft' class="arrow">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/move_left.svg"/>
+    </div>
+    <div id='moveright' class="arrow">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/move_right.svg"/>
     </div>
 
 	<!--Liste des 3 prochains événements-->
