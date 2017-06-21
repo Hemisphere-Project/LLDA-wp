@@ -84,7 +84,7 @@
     	<p> MENU </p>
     </div>
 
-    <div id="menu_barre" class="contenu_lieu" style="padding-bottom:4.5%; padding-top:5%;">
+    <div id="menu_barre" class="menu_class" style="padding-bottom:4.5%; padding-top:5%;">
         <input type="image" src="<?php bloginfo('stylesheet_directory'); ?>/img/bouton_close.svg" class="close_lieu" width="40px" />
     	<div class="box_menu_barre">
             <div id="button_recitlist" class="bouton" style="border:solid 3px #844184;">

@@ -154,7 +154,7 @@ $(".lieu").click(function(){$(".contenu_lieu").css("display","none");$("body").u
 $("#button_menu").click(function(){$("body").unmousewheel();});
 
 $('body').click(function () {
-	$("#menu_barre").css("display","none");
+	$("#menu_barre, .contenu_lieu").fadeOut(200);
 	$("body").mousewheel(function(event, delta) {
 	  this.scrollLeft -= (delta * 10);
 	  event.preventDefault();
@@ -165,7 +165,7 @@ $('body').click(function () {
 
 $('.close_lieu').click(function prout() {
 	// $(".contenu_lieu").css("display","none");
-	$(".contenu_lieu").fadeOut(100);
+	$(".contenu_lieu, #menu_barre").fadeOut(200);
 	$("body").mousewheel(function(event, delta) {
 	  this.scrollLeft -= (delta * 10);
 	  event.preventDefault();
