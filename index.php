@@ -1,19 +1,19 @@
 <html>
 <head>
 
-    <title>Le Long de l'Axe</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="le long de l'axe - Le Long de l'Axe est un projet artistique de KompleX KapharnaüM. Il prend place depuis le tram T3, dans et aux abords de Lyon, Villeurbanne, Vaulx-en-Velin, Décines, Meyzieu.">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/picto_recit.svg">
+  <title>Le Long de l'Axe</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="description" content="le long de l'axe - Le Long de l'Axe est un projet artistique de KompleX KapharnaüM. Il prend place depuis le tram T3, dans et aux abords de Lyon, Villeurbanne, Vaulx-en-Velin, Décines, Meyzieu.">
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+  <link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/picto_recit.svg">
 
 
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.cookie.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mousewheel.min.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
-
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.cookie.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mousewheel.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+  <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.min.js"></script>
 
     <!--<script>
 	$(document).ready(function () {

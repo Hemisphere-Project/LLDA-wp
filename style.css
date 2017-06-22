@@ -448,7 +448,7 @@ html:lang(en)>body  .info_container {
 	position:fixed;
 	top:0;
 	left:0;
-	z-index:25;
+	z-index:101;
 	width:63%;
 	/*width:32%;*/
 	background-color: rgba(255, 255, 255, 0.95);

@@ -55,10 +55,38 @@
 
 <?php wp_reset_query(); ?>
 
+<!--Liste des recits-->
+	<div id="action_container">
+
+		<div id="action_container_flex">
+        	<p class="action_list" style="color:#844184; font-size:1.25em;">Les histoires</p>
+			<?php
+            $currentID = get_the_ID();
+            $getNext=false;
+            $nextLink;
+            // $my_query = new WP_Query( array('post_type' => 'recit', 'post__not_in' => array($currentID), 'posts_per_page'=>'-1', 'numberposts'=>'100'));
+            $my_query = new WP_Query( array('post_type' => 'recit', 'posts_per_page'=>'-1', 'numberposts'=>'100'));
+            if ($my_query->have_posts()):while($my_query->have_posts()):$my_query->the_post();?>
+            <div>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <p class="action_list <?php if (get_the_ID()==$currentID){echo'action_active';}?>" ><?php the_title() ?></p>
+                </a>
+              <?php
+              if ($getNext==true){$nextLink=get_the_permalink();$getNext=false;}
+              if (get_the_ID()==$currentID){$getNext=true;}
+              ?>
+            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
+		</div>
+    </div>
 
 <!--en_Tête-->
 	<div id="histoire">
 		<p style="border-top: solid 3px #844184; display:inline-block; padding-top:1.1%;">L'histoire</p>
+    <div id="next_link">
+      <a href=<?php echo $nextLink; ?> title="nextos">Episode suivant >></a>
+    </div>
     </div>
 
 
@@ -75,28 +103,6 @@
     	<div style="background-color: rgba(255, 255, 255, 0.8);padding:10px;"><?php echo the_content(); ?></div>
     </div>
 
-
-
-<!--Liste des recits-->
-	<div id="action_container">
-
-		<div id="action_container_flex">
-        	<p class="action_list" style="color:#844184; font-size:1.25em;">Les histoires</p>
-			<?php
-            $currentID = get_the_ID();
-            // $my_query = new WP_Query( array('post_type' => 'recit', 'post__not_in' => array($currentID), 'posts_per_page'=>'-1', 'numberposts'=>'100'));
-            $my_query = new WP_Query( array('post_type' => 'recit', 'posts_per_page'=>'-1', 'numberposts'=>'100'));
-            if ($my_query->have_posts()):while($my_query->have_posts()):$my_query->the_post();?>
-            <div>
-                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                    <p class="action_list <?php if (get_the_ID()==$currentID){echo'action_active';}?>" ><?php the_title() ?></p>
-                </a>
-              <!-- <?php if (get_the_ID()==$currentID){echo'VOUS ICI';}?> -->
-            </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
-		</div>
-    </div>
 
 <?php wp_reset_query(); ?>
 
@@ -187,6 +193,12 @@ a {
 	font-family: OCR_A, Helvetica, sans-serif;
 	font-size: 1.5em;
 	color:#844184;
+}
+#next_link {
+	font-size: 0.6em;
+  float:right;
+  margin-right: 17%;
+  margin-top:20px;
 }
 
 #content_img > a, #content_img > p, #content_img > audio, #content_img > h1, #content_img > h2 {
@@ -322,7 +334,6 @@ audio {
 }
 
 #back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 0%; font-size:1em; color:#f9df68; float:left; display:block;}
-
 
 
 </style>
