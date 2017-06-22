@@ -100,6 +100,8 @@ $("#button_menu").click(function() {
 	$("#menu_barre").fadeIn(100);
 	$("#button_menu").css("display","none");
 	$(".liste_carte").fadeOut(200);
+	 window.location.hash = '';
+	//  history.pushState('', document.title, window.location.pathname); // plus récent mais moins compatible..
 });
 
 $('#content').click(function() {
@@ -126,11 +128,11 @@ $('.liste_carte').click(function(event){
 //$(".title_button").click(function(){$(".title_button").css("display","none")});
 $(".bouton").click(function() {$("#menu_barre").css('display','none'),$("#button_menu").css('display','block')});
 
-$("#button_recitlist").click(function() {$(".liste_carte").css("display","none");$("#recitlist").fadeIn(200);});
-$("#button_artistelist").click(function() {$(".liste_carte").css("display","none");$("#artistelist").fadeIn(200);});
+$("#button_recitlist").click(function() {$(".liste_carte").css("display","none");$("#recitlist").fadeIn(200); window.location.hash = '#histoire';});
+$("#button_artistelist").click(function() {$(".liste_carte").css("display","none");$("#artistelist").fadeIn(200); window.location.hash = '#complices';});
 $("#button_lieulist").click(function() {$(".liste_carte").css("display","none");$("#lieulist").fadeIn(200);});
-$("#button_recentlist").click(function() {$(".liste_carte").css("display","none");$("#recentlist").fadeIn(200);});
-$("#button_eventlist").click(function() {$(".liste_carte").css("display","none");$("#eventlist").fadeIn(200);});
+$("#button_recentlist").click(function() {$(".liste_carte").css("display","none");$("#recentlist").fadeIn(200); window.location.hash = '#action';});
+$("#button_eventlist").click(function() {$(".liste_carte").css("display","none");$("#eventlist").fadeIn(200); window.location.hash = '#evenement';});
 
 ///////// MENU INFO
 $('#button_info_sup').click (function() {
