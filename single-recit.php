@@ -63,7 +63,7 @@
 			<?php
             $currentID = get_the_ID();
             $getNext=false;
-            $nextLink;
+            $nextLink='empty';
             // $my_query = new WP_Query( array('post_type' => 'recit', 'post__not_in' => array($currentID), 'posts_per_page'=>'-1', 'numberposts'=>'100'));
             $my_query = new WP_Query( array('post_type' => 'recit', 'posts_per_page'=>'-1', 'numberposts'=>'100'));
             if ($my_query->have_posts()):while($my_query->have_posts()):$my_query->the_post();?>
@@ -84,9 +84,11 @@
 <!--en_Tête-->
 	<div id="histoire">
 		<p style="border-top: solid 3px #844184; display:inline-block; padding-top:1.1%;">L'histoire</p>
-    <div id="next_link">
-      <a href=<?php echo $nextLink; ?> title="nextos">Episode suivant >></a>
-    </div>
+    <?php if($nextLink!='empty'){ ?>
+      <div id="next_link">
+        <a href=<?php echo $nextLink; ?> title="nextos">Episode suivant >></a>
+      </div>
+    <?php } ?>
     </div>
 
 
@@ -134,6 +136,7 @@
 /*------------------------------------------
 ------------------RECIT-------------------
 ------------------------------------------*/
+
 
 @charset "utf-8";
 
