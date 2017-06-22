@@ -39,12 +39,10 @@
 ------------------STYLE-------------------
 ------------------------------------------*/
 @charset "utf-8";
-
 * {
     margin: 0;
     padding: 0;
 }
-
 @font-face {
 font-family: 'ORATOR';
 src: url('<?php bloginfo('stylesheet_directory');?>/fonts/orator_std/OratorStd.eot');
@@ -55,7 +53,6 @@ src: url('<?php bloginfo('stylesheet_directory');?>/fonts/orator_std/OratorStd.o
 font-weight: normal;
 font-style: normal;
 }
-
 @font-face {
 font-family: 'OCR_A';
 src: url('<?php bloginfo('stylesheet_directory');?>/fonts/ocrA/OCRAStd.eot');
@@ -66,7 +63,6 @@ src: url('<?php bloginfo('stylesheet_directory');?>/fonts/ocrA/OCRAStd.otf') for
 font-weight: normal;
 font-style: normal;
 }
-
 @font-face {
 font-family: 'newsGothic';
 src: url('<?php bloginfo('stylesheet_directory');?>/fonts/newsgothic/NewsGothicStd.eot');
@@ -77,38 +73,30 @@ src: url('<?php bloginfo('stylesheet_directory');?>/fonts/newsgothic/NewsGothicS
 font-weight: normal;
 font-style: normal;
 }
-
-
 html {
 	/*font-size: 62.5%;*/
 	width:auto; height:100%;
 
 }
-
 body {
 	height: 100%;
 	background-image:url(<?php bloginfo('stylesheet_directory'); ?>/img/fond_blanc.png);
 	background-repeat:repeat;
 }
-
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
 }
-
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
 }
-
 a {
 	text-decoration:none;
 	color:#d84c29;
 }
-
 p, li {
 	color: #d84c29;
 }
-
 .bande_random {
 	height:14%;
 	width:45%;
@@ -128,8 +116,6 @@ p, li {
 	font-size:0.75em;
 	font-family: ORATOR, Helvetica, sans-serif;
 }
-
-
 #titre {
 	background-color:#f9df68; color:#d84c29;
 	display:table;
@@ -140,7 +126,6 @@ p, li {
 	letter-spacing: 2px;
 	font-size:1.75em;
 }
-
 #parents_container {
 	height:65%;
 	width:17.5%;
@@ -153,16 +138,13 @@ p, li {
 	overflow-y: hidden;
 	padding-bottom:5%;
 }
-
 #parents_container:hover {
 	overflow-y:auto;
 }
-
 #parents_container p {
 	display:block;
 	float:left;
 }
-
 .parents_list {
 	font-family: OCR_A, Helvetica, sans-serif;
 	font-size: 0.7em;
@@ -170,7 +152,6 @@ p, li {
 	margin-left:7%;
 	padding:2%;
 }
-
 .quoi_list {
 	float:left;
 	display:block;
@@ -181,7 +162,6 @@ p, li {
 	padding:2% 2% 0 2%;
 	margin-bottom:1%;
 }
-
 #quoi {
 	position:absolute; left:19.5%; top:7%;
 	padding-top:1%;
@@ -190,8 +170,6 @@ p, li {
 	font-family: OCR_A, Helvetica, sans-serif !important;
 	font-size: 1.3em;
 }
-
-
 #content_text {
 	background-image:url(<?php bloginfo('stylesheet_directory');?>/img/fond_texte.png);
 	background-repeat:repeat;
@@ -205,18 +183,15 @@ p, li {
 	left:19.5%;
 	top:22%;
 }
-
 #content_text:hover {
 	overflow-y:auto;
 }
-
 #content_text img {
 	display:none;
 }
 #content_text iframe {
 	display:none;
 }
-
 #content_text p {
 	  background-color:white;
 	  display:inline;
@@ -225,7 +200,6 @@ p, li {
 	  font-family:newsGothic, Helvetica, sans-serif !important;
 	  padding:1px 0;
 	  }
-
 #content_text audio {
 	display:block;
 	margin: 10px 0 10px 0;
@@ -233,7 +207,6 @@ p, li {
 #content_img > a, #content_img > p, #content_img > audio, #content_img > h1, #content_img > h2 {
 	display:none;
 }
-
 #content_img {
 	width:44%;
 	display:inline;
@@ -242,7 +215,6 @@ p, li {
 	overflow:hidden;
 	height:77%;
 }
-
 #content_img img {
 	height:auto !important;
 	border: 0;
@@ -251,29 +223,22 @@ p, li {
 	-webkit-filter: grayscale(100%);
 	filter: gray;
 }
-
 #content_img img:hover,
 #content_img img:focus,
 #content_img img.active {
   filter: none;
   -webkit-filter: grayscale(0) !important;
-
 }
-
 #content_img:hover {
 	overflow-y:scroll;
 }
 #content_img iframe {
 	margin: 2% auto;
 }
-
 audio {
 	visibility:visible !important;
 }
-
 #back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 0%; font-size:1em; color:#f9df68; float:left; display:inline;}
-
-
 </style>
 
 </head>
