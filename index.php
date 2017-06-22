@@ -11,9 +11,8 @@
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.cookie.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mousewheel.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
-  <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 
     <!--<script>
 	$(document).ready(function () {
@@ -26,6 +25,33 @@
 		}
 	});
 	</script>-->
+  <script>
+      theme_directory = "<?php echo get_template_directory_uri().'/js/script.js' ?>";
+      ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+  </script>
+  <script type="text/javascript">
+  	$(document).ready(function() {
+  		var date = new Date();
+  		var minutes =20;
+  		date.setTime(date.getTime() + (minutes * 60 * 1000));
+  		// check cookie
+  		var visited = $.cookie("visited");
+      console.log(date.getHours()+'h'+date.getMinutes());
+			console.log(visited);
+  		if (visited == null) {
+  			$('#opening').css('display','block');
+    		// set cookie
+    		$.cookie('visited', 'yes', { expires: date , path: '/' });
+  		}
+  		else{
+  			$('#opening').css('display','none');
+  			$("body").mousewheel(function(event, delta){
+				  this.scrollLeft -= (delta * 10);
+				  event.preventDefault();});
+  		}
+  	});
+  </script>
+
 
 	 <div id="ladiv">
          <div id="menu_info" style="z-index:20;">
@@ -3442,34 +3468,5 @@
 
 
     </div>
-
-<script>
-    theme_directory = "<?php echo get_template_directory_uri().'/js/script.js' ?>";
-    ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
-</script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		var date = new Date();
-		var minutes = 30;
-		date.setTime(date.getTime() + (minutes * 60 * 1000));
-		// check cookie
-		var visited = $.cookie("visited")
-
-		if (visited == null) {
-			$('#opening').css('display','block');
-			//alert($.cookie("visited"));
-		// set cookie
-		$.cookie('visited', 'yes', { expires: date , path: '/' });
-		}
-		else{
-			$('#opening').css('display','none');
-			$("body").mousewheel(function(event, delta){
-				  this.scrollLeft -= (delta * 10);
-				  event.preventDefault();});
-		}
-	});
-</script>
-
-
 </body>
 </html>

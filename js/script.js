@@ -4,20 +4,21 @@ $(function () {
 		window.scrollTo(0, 0);
 	});
 
-
-$('#go_scroll').click(function(){
+/////////////// WHEN CLOSING OPENING WINDOW, SCROLL ALL RIGHT
+$('#go_scroll, #opening').click(function(){
 	var id_recent = $("#idpost").val();
 	var test = $("#"+id_recent).closest('.lieu').attr("id");
 	var screen_width = $(window).width();
 	var position = parseInt($("#"+test).css('left'));
 	var demi = 1.9;
-	//alert(test);
 	if (screen_width < position){
-	var speed = 750; // Durée de l'animation (en ms)
-	$('html, body').animate({ scrollLeft:
-	$("#"+test).offset().left -(screen_width/demi)}, speed ); // Go
-	} else {};
+		// $('html, body').animate({ scrollLeft:
+		// $("#"+test).offset().left -(screen_width/demi)}, 750 ); // Go
+		var bigwidth = $('body').outerWidth();
+		$('body').stop().animate( { scrollLeft: bigwidth-screen_width }, {duration:2500, easing: 'swing' });
+	}
 });
+//////////////////////////////
 
 	$('.texte, .titre_info').hide ();
 /*	var current = null;
@@ -211,12 +212,12 @@ if (hash=='#complices') {$("#artistelist").css("display","block");}
 
 /////////////// ARROWS LEFT RIGHT
 $('#moveright').mousedown(function() {
-var s = $(document).scrollLeft();
-$('body').stop().animate( { scrollLeft: s+1000 }, {duration:500, easing: 'easeOutCubic' });
+	var s = $(document).scrollLeft();
+	$('body').stop().animate( { scrollLeft: s+1000 }, {duration:500, easing: 'easeOutCubic' });
 });
 $('#moveleft').mousedown(function() {
-var s = $(document).scrollLeft();
-$('body').stop().animate( { scrollLeft: s-1000 }, {duration:500, easing: 'linear' });
+	var s = $(document).scrollLeft();
+	$('body').stop().animate( { scrollLeft: s-1000 }, {duration:500, easing: 'linear' });
 });
 
 //////////////// JQUERY UI DRAGGABLE
