@@ -159,14 +159,14 @@ body {
  	z-index: 100;
 	position: fixed;
 	left: 2%;
-	top: 50%;
+	top: 40%;
 }
 #moveright{
 	float: right;
  	z-index: 100;
 	position: fixed;
 	right: 2%;
-	top: 50%;
+	top: 40%;
 }
 .arrow img{
 	height:15%;
