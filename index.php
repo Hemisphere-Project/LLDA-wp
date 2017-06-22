@@ -694,7 +694,7 @@
 
 <!--Algeco-->
             <?php $term=get_term_by('slug', 'algeco', 'lieu'); ?>
-            <div class="lieu" style="top:307; left:848; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+            <div class="lieu" style="top:317; left:848; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
             <input type="hidden" id="idlieu5" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                     <img class="radiant" src="" alt="" />
