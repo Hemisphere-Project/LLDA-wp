@@ -34,105 +34,10 @@
 	$(this).addClass("active");
 	});
 </script>
-</head>
-<body>
-
-
-<!--Retour vers l'accueil-->
-    <div style="height:21%; width:50%; display:inline-block;" id="retour">
-    	<a href="<?php echo home_url(); ?>#action">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="margin:3% 0 0 3%; display:inline; float:left;" height="40%"/>
-        <p id="back">
-        Retour
-        </p>
-        </a>
-    </div>
-
-<!--Liste de 3 posts au hasard-->
-	<div class="bande_random" style="visibility:hidden;">
-        <?php
-        remove_all_filters('posts_orderby');
-        $posts = get_posts('post_type=action&orderby=rand&numberposts=3'); foreach($posts as $post) { ?>
-        <div style="display:inline;">
-            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-            <p><?php the_title(); ?></p>
-            </a>
-            <?php
-            $arg = array( 'parent' => 0);
-            $terms = wp_get_object_terms( $post->ID, 'artiste', $arg );
-            foreach($terms as $t): ?>
-                <a href="<?php echo get_term_link($t->slug,'artiste');?>">
-                   <p> <?php echo $t->name;?> </p>
-                </a>
-            <?php endforeach; ?>
-        </div>
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_random.svg" alt="*" height="90%" style="display:inline; margin:0 4% 0 1.8%">
-        <?php } ?>
-    </div>
-
-    <?php wp_reset_postdata();?>
-
-
-<!--Vers l'épisode et/ou l'artiste-->
-
-    <div id="parents_container">
-			<p class="quoi_list">Fait par:</p>
-			<br>
-        <?php
-        $object_terms_art = wp_get_object_terms($post->ID, 'artiste', array('parent' => 0));
-        if ($object_terms_art) {
-            foreach ($object_terms_art as $term_art) {
-				//print_r($term_art);
-                ?>
-                    <div>
-                    <a href="<?php echo get_term_link($term_art->slug, 'artiste'); ?>">
-                    <!-- <p class="quoi_list">Fait par:</p> -->
-                    <div style="clear:both"></div>
-                    <p class="parents_list"><?php echo $term_art->name;?></p>
-                    </a>
-                    </div>
-                <?php
-				$args = (array('parent' => $term_art->term_id));
-				$termchildrens = wp_get_object_terms($post->ID, 'artiste', $args);
-				foreach ($termchildrens as $termChild) {
-					?>
-                    <div>
-                    <a href="<?php echo get_term_link($termChild->slug, 'artiste'); ?>">
-                    <p class="quoi_list">Dans le cadre de:</p>
-                    <div style="clear:both"></div>
-					<p class="parents_list"><?php echo $termChild->name; ?></p>
-                    </a>
-                    </div>
-                    </br>
-                <?php
-				}
-            }
-        }
-        ?>
-    </div>
-
-<!--Contenu-->
-	<div id="quoi">
-    	<p>L'Action</p>
-    </div>
-    <div id="content_text">
-        <a href="<?php the_permalink(); ?>"><span id="titre"><?php the_title();?></span></a>
-    	<div style="background-color: rgba(255, 255, 255, 0.8);padding:10px;"><?php the_content(); ?></div>
-    </div>
-    <div id="content_img">
-    	<?php the_content(); ?>
-    </div>
-
-
-<script>
-$('#content_img iframe').parent('p').replaceTag('<span>'), true;
-</script>
-
-
-</body>
-</html>
-
 <style>
+/*------------------------------------------
+------------------STYLE-------------------
+------------------------------------------*/
 @charset "utf-8";
 
 * {
@@ -370,3 +275,101 @@ audio {
 
 
 </style>
+
+</head>
+<body>
+
+
+<!--Retour vers l'accueil-->
+    <div style="height:21%; width:50%; display:inline-block;" id="retour">
+    	<a href="<?php echo home_url(); ?>#action">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="margin:3% 0 0 3%; display:inline; float:left;" height="40%"/>
+        <p id="back">
+        Retour
+        </p>
+        </a>
+    </div>
+
+<!--Liste de 3 posts au hasard-->
+	<div class="bande_random" style="visibility:hidden;">
+        <?php
+        remove_all_filters('posts_orderby');
+        $posts = get_posts('post_type=action&orderby=rand&numberposts=3'); foreach($posts as $post) { ?>
+        <div style="display:inline;">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+            <p><?php the_title(); ?></p>
+            </a>
+            <?php
+            $arg = array( 'parent' => 0);
+            $terms = wp_get_object_terms( $post->ID, 'artiste', $arg );
+            foreach($terms as $t): ?>
+                <a href="<?php echo get_term_link($t->slug,'artiste');?>">
+                   <p> <?php echo $t->name;?> </p>
+                </a>
+            <?php endforeach; ?>
+        </div>
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_random.svg" alt="*" height="90%" style="display:inline; margin:0 4% 0 1.8%">
+        <?php } ?>
+    </div>
+
+    <?php wp_reset_postdata();?>
+
+
+<!--Vers l'épisode et/ou l'artiste-->
+
+    <div id="parents_container">
+			<p class="quoi_list">Fait par:</p>
+			<br>
+        <?php
+        $object_terms_art = wp_get_object_terms($post->ID, 'artiste', array('parent' => 0));
+        if ($object_terms_art) {
+            foreach ($object_terms_art as $term_art) {
+				//print_r($term_art);
+                ?>
+                    <div>
+                    <a href="<?php echo get_term_link($term_art->slug, 'artiste'); ?>">
+                    <!-- <p class="quoi_list">Fait par:</p> -->
+                    <div style="clear:both"></div>
+                    <p class="parents_list"><?php echo $term_art->name;?></p>
+                    </a>
+                    </div>
+                <?php
+				$args = (array('parent' => $term_art->term_id));
+				$termchildrens = wp_get_object_terms($post->ID, 'artiste', $args);
+				foreach ($termchildrens as $termChild) {
+					?>
+                    <div>
+                    <a href="<?php echo get_term_link($termChild->slug, 'artiste'); ?>">
+                    <p class="quoi_list">Dans le cadre de:</p>
+                    <div style="clear:both"></div>
+					<p class="parents_list"><?php echo $termChild->name; ?></p>
+                    </a>
+                    </div>
+                    </br>
+                <?php
+				}
+            }
+        }
+        ?>
+    </div>
+
+<!--Contenu-->
+	<div id="quoi">
+    	<p>L'Action</p>
+    </div>
+    <div id="content_text">
+        <a href="<?php the_permalink(); ?>"><span id="titre"><?php the_title();?></span></a>
+    	<div style="background-color: rgba(255, 255, 255, 0.8);padding:10px;"><?php the_content(); ?></div>
+    </div>
+    <div id="content_img">
+    	<?php the_content(); ?>
+    </div>
+
+
+<script>
+$('#content_img iframe').parent('p').replaceTag('<span>'), true;
+</script>
+
+
+</body>
+</html>

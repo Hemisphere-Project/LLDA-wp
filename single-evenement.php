@@ -34,47 +34,11 @@
 	$(this).addClass("active");
 	});
 </script>
-</head>
-<body>
-
-
-<!--Retour vers l'accueil-->
-    <div style="height:21%; width:50%; display:inline-block;" id="retour">
-    	<a href="<?php echo home_url(); ?>#evenement">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="margin:3% 0 0 3%; display:inline; float:left;" height="40%"/>
-        <p id="back">
-        Retour
-        </p>
-        </a>
-    </div>
-
-
-
-    <!-- <?php wp_reset_postdata();?> -->
-
-
-<!--Contenu-->
-	<div id="quoi">
-    	<p>L'action à venir</p>
-    </div>
-    <div id="content_text">
-        <a href="<?php the_permalink(); ?>"><span id="titre"><?php the_title();?></span></a>
-    	<div style="background-color: rgba(255, 255, 255, 0.8);padding:10px;"><?php the_content(); ?></div>
-    </div>
-    <div id="content_img">
-    	<?php the_content(); ?>
-    </div>
-
-
-<script>
-$('#content_img iframe').parent('p').replaceTag('<span>'), true;
-</script>
-
-
-</body>
-</html>
-
 <style>
+/*------------------------------------------
+------------------STYLE-------------------
+------------------------------------------*/
+
 @charset "utf-8";
 
 * {
@@ -314,3 +278,43 @@ audio {
 
 
 </style>
+
+</head>
+<body>
+
+
+<!--Retour vers l'accueil-->
+    <div style="height:21%; width:50%; display:inline-block;" id="retour">
+    	<a href="<?php echo home_url(); ?>#evenement">
+        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/picto_retour.svg" style="margin:3% 0 0 3%; display:inline; float:left;" height="40%"/>
+        <p id="back">
+        Retour
+        </p>
+        </a>
+    </div>
+
+
+
+    <!-- <?php wp_reset_postdata();?> -->
+
+
+<!--Contenu-->
+	<div id="quoi">
+    	<p>L'action à venir</p>
+    </div>
+    <div id="content_text">
+        <a href="<?php the_permalink(); ?>"><span id="titre"><?php the_title();?></span></a>
+    	<div style="background-color: rgba(255, 255, 255, 0.8);padding:10px;"><?php the_content(); ?></div>
+    </div>
+    <div id="content_img">
+    	<?php the_content(); ?>
+    </div>
+
+
+<script>
+$('#content_img iframe').parent('p').replaceTag('<span>'), true;
+</script>
+
+
+</body>
+</html>
