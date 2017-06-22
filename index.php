@@ -422,7 +422,7 @@
 
 <!--Aeroport-->
             <?php $term=get_term_by('slug', 'aeroport', 'lieu'); ?>
-            <div class="lieu" style="top:232; left:81; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+            <div class="lieu" style="top:262; left:81; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
             <input type="hidden" id="idlieu2" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                     <img class="radiant" src="" alt="" />
@@ -558,7 +558,7 @@
 
 <!--champs-->
             <?php $term=get_term_by('slug', 'champs', 'lieu'); ?>
-            <div class="lieu" style="top:209; left:248; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+            <div class="lieu" style="top:239; left:248; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
             <input type="hidden" id="idlieu4" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                     <img class="radiant" src="" alt="" />
@@ -694,7 +694,7 @@
 
 <!--Algeco-->
             <?php $term=get_term_by('slug', 'algeco', 'lieu'); ?>
-            <div class="lieu" style="top:287; left:848; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+            <div class="lieu" style="top:307; left:848; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
             <input type="hidden" id="idlieu5" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                     <img class="radiant" src="" alt="" />
@@ -830,7 +830,7 @@
 
 <!--Zone_indu-->
             <?php $term=get_term_by('slug', 'zone_indu', 'lieu'); ?>
-            <div class="lieu" style="top:171; left:1152; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+            <div class="lieu" style="top:201; left:1152; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
             <input type="hidden" id="idlieu7" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                     <img class="radiant" src="" alt="" />
@@ -966,7 +966,7 @@
 
 <!--Decharge_Alu-->
             <?php $term=get_term_by('slug', 'decharge_alu', 'lieu'); ?>
-            <div class="lieu" style="top:300; left:1775; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+            <div class="lieu" style="top:330; left:1775; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
             <input type="hidden" id="idlieu6" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                     <img class="radiant" src="" alt="" />
@@ -1102,7 +1102,7 @@
 
 <!--Centre_aqua-->
              <?php $term=get_term_by('slug', 'centre_aqua', 'lieu'); ?>
-             <div class="lieu" style="top:217; left:2011; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:247; left:2011; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu3" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -1240,7 +1240,7 @@
 
 <!--queen_pizza-->
              <?php $term=get_term_by('slug', 'queen_pizza', 'lieu'); ?>
-             <div class="lieu" style="top:231; left:2647; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:261; left:2647; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu9" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -1378,7 +1378,7 @@
 
 <!--Grand_stade-->
              <?php $term=get_term_by('slug', 'grand_stade', 'lieu'); ?>
-             <div class="lieu" style="top:139; left:2609; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:169; left:2609; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu8" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -1517,7 +1517,7 @@
 
 <!--grand_large-->
              <?php $term=get_term_by('slug', 'grand_large', 'lieu'); ?>
-             <div class="lieu" style="top:441; left:2549; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:471; left:2549; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu10" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -1655,7 +1655,7 @@
 
 <!--tour-->
              <?php $term=get_term_by('slug', 'tour', 'lieu'); ?>
-             <div class="lieu" style="top:414; left:2746; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:444; left:2746; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu11" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -1793,7 +1793,7 @@
 
 <!--espace_vert-->
              <?php $term=get_term_by('slug', 'espace_vert', 'lieu'); ?>
-             <div class="lieu" style="top:351; left:3014; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:381; left:3014; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu13" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -1931,7 +1931,7 @@
 
 <!--parking-->
              <?php $term=get_term_by('slug', 'parking', 'lieu'); ?>
-             <div class="lieu" style="top:219; left:3043; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:249; left:3043; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu12" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -2069,7 +2069,7 @@
 
 <!--resto-->
              <?php $term=get_term_by('slug', 'resto', 'lieu'); ?>
-             <div class="lieu" style="top:298; left:3593; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:328; left:3593; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu14" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -2207,7 +2207,7 @@
 
 <!--rroms-->
              <?php $term=get_term_by('slug', 'rroms', 'lieu'); ?>
-             <div class="lieu" style="top:255; left:3978; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:285; left:3978; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu15" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -2345,7 +2345,7 @@
 
 <!--carre_de_soie-->
              <?php $term=get_term_by('slug', 'carre_de_soie', 'lieu'); ?>
-             <div class="lieu" style="top:361; left:4211; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:391; left:4211; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu17" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -2483,7 +2483,7 @@
 
 <!--snack-->
              <?php $term=get_term_by('slug', 'snack', 'lieu'); ?>
-             <div class="lieu" style="top:195; left:4273; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:225; left:4273; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu18" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -2621,7 +2621,7 @@
 
 <!--dalle-->
              <?php $term=get_term_by('slug', 'dalle', 'lieu'); ?>
-             <div class="lieu" style="top:172; left:4677; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:202; left:4677; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu19" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -2759,7 +2759,7 @@
 
 <!--proprete-->
              <?php $term=get_term_by('slug', 'proprete', 'lieu'); ?>
-             <div class="lieu" style="top:128; left:4856; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:158; left:4856; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu21" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -2897,7 +2897,7 @@
 
 <!--ecole-->
              <?php $term=get_term_by('slug', 'ecole', 'lieu'); ?>
-             <div class="lieu" style="top:148; left:4728; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:178; left:4728; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu20" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -3035,7 +3035,7 @@
 
 <!--veolia-->
              <?php $term=get_term_by('slug', 'veolia', 'lieu'); ?>
-             <div class="lieu" style="top:160; left:4169; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:190; left:4169; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu16" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -3174,7 +3174,7 @@
 
 <!--mirage-->
              <?php $term=get_term_by('slug', 'mirage', 'lieu'); ?>
-             <div class="lieu" style="top:127; left:5055; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:157; left:5055; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu22" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
@@ -3312,7 +3312,7 @@
 
 <!--part_dieu-->
              <?php $term=get_term_by('slug', 'part_dieu', 'lieu'); ?>
-             <div class="lieu" style="top:70; left:5628; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
+             <div class="lieu" style="top:100; left:5628; position:absolute;" id="<?php echo $term->term_taxonomy_id; ?>">
              <input type="hidden" id="idlieu23" value="<?php echo $term->term_taxonomy_id; ?>">
                 <div class="signal">
                         <img class="radiant" src="" alt="" />
