@@ -36,8 +36,6 @@
   		date.setTime(date.getTime() + (minutes * 60 * 1000));
   		// check cookie
   		var visited = $.cookie("visited");
-      console.log(date.getHours()+'h'+date.getMinutes());
-			console.log(visited);
   		if (visited == null) {
   			$('#opening').css('display','block');
     		// set cookie

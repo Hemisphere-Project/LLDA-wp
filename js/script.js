@@ -202,7 +202,6 @@ $('.lieu').click(function(event){
 
 
 
-console.log("MODIFS JEREMIE JUIN 2017");
 
 /////////////// SCAN HASHTAG
 var hash = window.location.hash;
