@@ -190,6 +190,7 @@ audio {
 	left:-17.5%;
 	background-image:url(<?php bloginfo('stylesheet_directory');?>/img/fond_recit.png);
 	background-repeat:repeat;
+  z-index: 10;
 }
 #action_container_flex {
 	display: inline-flex;

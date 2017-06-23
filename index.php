@@ -49,6 +49,7 @@
 				  this.scrollLeft -= (delta * 10);
 				  event.preventDefault();});
   		}
+      // $('#opening').css('display','block');
   	});
   </script>
 
@@ -92,9 +93,21 @@
         <div style="width:80%; margin:0 auto; overflow-y:auto;">
         	<p style="color:#388ea5; font-size: 3.2em; font-family:OCR_A, Helvetica, sans-serif; margin-bottom:2%;"> Le Long de l'Axe</p>
             <p id="text_intro">
-            La curiosité vous a gagné... Bravo!<br>
+
+            Et  si l'on s'autorisait un pas de côté ? <br>
+            Si notre trajet quotidien prenait un nouveau départ ? <br>
+            Si nous laissions notre imagination prendre les commandes et nous transporter ?<br>
+            Après 2 ans d’exploration dans et autour du Tram T3,<br>
+            KompleX KapharnaüM, Pixel 13, Compagnie Sous X, Manu Prost et Pierre-Louis Gallo, <br>
+            vous invitent à cheminer depuis la gare et jusqu’à l’aéroport sur plus de 23 km, Le long de l’Axe.<br>
+            Une aventure pédestre et artistique sur les traces de 2 personnages nés d’une fiction véritable,  <br>
+            rythmée par des interventions inattendues du mercredi 13 au dimanche 17 septembre 2017.<br>
+            À chaque jour, un nouveau voyage toujours un peu plus loin vers l'Est. <br>
+            Une aventure sur plus de 23 km qui prendra son envol le dimanche, pour l'Échappée Belle.<br>
+
+            <!-- La curiosité vous a gagné... Bravo!<br>
             Bienvenue Le long de l'Axe, projet artistique le long de l'Axe du tram T3 et inspiré d'une histoire vraie...<br>
-			Le 30 août 2015, Manuel Prost, dessinateur de presse, s'exerce à croquer des scènes de vie à l'aéroport Saint Exupéry.<br>
+			      Le 30 août 2015, Manuel Prost, dessinateur de presse, s'exerce à croquer des scènes de vie à l'aéroport Saint Exupéry.<br>
             Au bout d'un moment, il repère un homme qui semble un peu perdu : Pierre-Louis Gallo attend son avion qui n'arrive pas.<br>
             Ils se rencontrent, discutent un peu, décident d'aller profiter du soleil, marchent quelques instants.<br>
             Puis encore.<br>
@@ -103,7 +116,7 @@
             5 jours à cheminer le long des voies du Tram T3, dormir à la belle étoile, croiser des fragments de vies multiples, regarder les paysages.<br><br>
             Le vendredi 4 septembre, leurs chemins se séparent à la gare de la Part Dieu.<br>
             Pierre-Louis Gallo, bouleversé par cette traversée de la ville, décide de continuer et saute dans un train en direction de Aix-les-Bains pour aller faire de la luge.<br>
-            Manuel Prost retourne chercher d'autres situations à dessiner.<br>
+            Manuel Prost retourne chercher d'autres situations à dessiner.<br> -->
             </p>
          </div>
 	</div>
@@ -130,7 +143,7 @@
 
     	<div class="box_menu_barre">
             <div id="button_eventlist" class="bouton" style="border:solid 3px #4b99ad;">
-                <p style="color:#4b99ad;">Actions à venir</p>
+                <p style="color:#4b99ad;">À venir</p>
             </div>
 
             <div id="button_recentlist" class="bouton" style="border:solid 3px #cc6566;">
@@ -157,7 +170,7 @@
     <div id="eventlist" class="liste_carte">
         <div class="flex">
             <div class="title_button" style="color:#4b99ad; background-image:url(<?php bloginfo('stylesheet_directory'); ?>/img/fond_event.png); width:250px;">
-                <p>Actions à venir</p>
+                <p>À venir</p>
             </div>
 		<?php
         $my_query = new WP_Query( array('post_type' => 'evenement', 'posts_per_page' => 3, 'numberposts' => 3));
