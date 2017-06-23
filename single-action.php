@@ -320,7 +320,7 @@ audio {
 
 <!--Contenu-->
 	<div id="quoi">
-    	<p>L'Action</p>
+    	<p>L'Action passée</p>
     </div>
     <div id="content_text">
         <a href="<?php the_permalink(); ?>"><span id="titre"><?php the_title();?></span></a>
