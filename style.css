@@ -739,12 +739,12 @@ html:lang(en)>body  .info_container {
 }
 
 #text_intro{
-    background-color: white;
-    display: inline;
+	background-color: white;
+	display: inline;
 	font-size:1.7em;
-    line-height: 1.5em;
-    box-shadow: 10px 0 0 white, -7px 0 0 white;
-    font-family: newsGothic, Helvetica, sans-serif;
+	line-height: 1.5em;
+	box-shadow: 10px 0 0 white, -7px 0 0 white;
+	font-family: newsGothic, Helvetica, sans-serif;
 	color:#388ea5;
 }
 #opening {
@@ -752,4 +752,20 @@ html:lang(en)>body  .info_container {
 }
 #opening:hover {
 	overflow-y:auto;
+}
+.overlay_content{
+
+}
+.overlay_left{
+	width:40%;
+	float:left;
+	display:block;
+}
+#overlay_img{
+	width:100%;
+}
+.overlay_right{
+	margin-left: 2%;
+	float:left;
+	width:58%;
 }

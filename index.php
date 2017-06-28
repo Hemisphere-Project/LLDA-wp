@@ -88,10 +88,13 @@
 <body>
     <div class="contenu_lieu" style="padding-bottom:4.5%; padding-top:3%; overflow:hidden; width:90%; height:75%; margin:3% 0 0 2%;" id="opening">
         <input type="image" src="<?php bloginfo('stylesheet_directory'); ?>/img/bouton_close.svg" class="close_lieu" width="40px" id="go_scroll"/>
-        <div style="width:80%; margin:0 auto; overflow-y:auto;">
-        	<p style="color:#388ea5; font-size: 3.2em; font-family:OCR_A, Helvetica, sans-serif; margin-bottom:2%;"> Le Long de l'Axe</p>
+        <div class="overlay_content" style="width:80%; overflow-y:auto;">
+          <div class="overlay_left">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/LLDL-saison4.jpg" id="overlay_img"/>
+          </div>
+          <div class="overlay_right">
+            <p style="color:#388ea5; font-size: 3.2em; font-family:OCR_A, Helvetica, sans-serif; margin-bottom:2%;"> Le Long de l'Axe</p>
             <p id="text_intro">
-
             Et  si l'on s'autorisait un pas de côté ? <br>
             Si notre trajet quotidien prenait un nouveau départ ? <br>
             Si nous laissions notre imagination prendre les commandes et nous transporter ?<br>
@@ -102,7 +105,6 @@
             rythmée par des interventions inattendues du mercredi 13 au dimanche 17 septembre 2017.<br>
             À chaque jour, un nouveau voyage toujours un peu plus loin vers l'Est. <br>
             Une aventure sur plus de 23 km qui prendra son envol le dimanche, pour l'Échappée Belle.<br>
-
             <!-- La curiosité vous a gagné... Bravo!<br>
             Bienvenue Le long de l'Axe, projet artistique le long de l'Axe du tram T3 et inspiré d'une histoire vraie...<br>
 			      Le 30 août 2015, Manuel Prost, dessinateur de presse, s'exerce à croquer des scènes de vie à l'aéroport Saint Exupéry.<br>
@@ -116,6 +118,7 @@
             Pierre-Louis Gallo, bouleversé par cette traversée de la ville, décide de continuer et saute dans un train en direction de Aix-les-Bains pour aller faire de la luge.<br>
             Manuel Prost retourne chercher d'autres situations à dessiner.<br> -->
             </p>
+          </div>
          </div>
 	</div>
 
