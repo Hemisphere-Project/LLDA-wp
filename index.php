@@ -174,7 +174,7 @@
                 <p>À venir</p>
             </div>
 		<?php
-        $my_query = new WP_Query( array('post_type' => 'evenement', 'posts_per_page' => 3, 'numberposts' => 3));
+        $my_query = new WP_Query( array('post_type' => 'evenement', 'posts_per_page' => '-1', 'numberposts' => '100'));
         if ($my_query->have_posts()):while($my_query->have_posts()):$my_query->the_post();?>
         	<a href="<?php the_permalink();?>" class="link_action">
                 <div class="preview event">
