@@ -239,6 +239,20 @@ audio {
 	visibility:visible !important;
 }
 #back {font-family:ORATOR, Helvetica, sans-serif; margin:6% 0 0 0%; font-size:1em; color:#f9df68; float:left; display:inline;}
+
+
+/*------VIDEO------*/
+#content_img > .wp-video {
+	display:none;
+}
+.wp-video{
+	width:100% !important;
+}
+.wp-video-shortcode{
+	width:100%;
+  height: auto;
+}
+
 </style>
 
 </head>
