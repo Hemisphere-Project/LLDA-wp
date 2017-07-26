@@ -747,14 +747,18 @@ html:lang(en)>body  .info_container {
 	font-family: newsGothic, Helvetica, sans-serif;
 	color:#388ea5;
 }
+.url{
+	color:#388ea5;
+	font-weight: bold;
+	text-decoration: underline;
+}
 #opening {
 	display:none;
 }
 #opening:hover {
 	overflow-y:auto;
 }
-.overlay_content{
-
+.overlay_content {
 }
 .overlay_left{
 	width:40%;

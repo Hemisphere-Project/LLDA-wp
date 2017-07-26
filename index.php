@@ -105,6 +105,11 @@
             rythmée par des interventions inattendues du mercredi 13 au dimanche 17 septembre 2017.<br>
             À chaque jour, un nouveau voyage toujours un peu plus loin vers l'Est. <br>
             Une aventure sur plus de 23 km qui prendra son envol le dimanche, pour l'Échappée Belle.<br>
+
+            <br>
+            <a class='url' href="<?php bloginfo('stylesheet_directory'); ?>/img/LLDL-saison4-Programme.pdf" target="blank"> Pour télécharger le programme complet de l’Echappée Belle, c’est ici !</a>
+            <!-- <a class='url' href="https://drive.google.com/uc?export=download&amp;id=0Bzbjdt6-Nbt0TndMbGxJZERFM00"> Pour télécharger le programme complet de l’Echappée Belle, c’est ici !</a> -->
+
             <!-- La curiosité vous a gagné... Bravo!<br>
             Bienvenue Le long de l'Axe, projet artistique le long de l'Axe du tram T3 et inspiré d'une histoire vraie...<br>
 			      Le 30 août 2015, Manuel Prost, dessinateur de presse, s'exerce à croquer des scènes de vie à l'aéroport Saint Exupéry.<br>

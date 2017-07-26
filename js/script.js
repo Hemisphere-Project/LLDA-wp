@@ -180,7 +180,7 @@ $('.close_lieu').click(function prout() {
 if ($('#opening').css('display','block')) {$("body").unmousewheel();};
 
 
-$('.lieu').click(function(event){
+$('.lieu, .url').click(function(event){
     event.stopPropagation();
 });
 
